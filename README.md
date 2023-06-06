@@ -1,13 +1,19 @@
 # 100-Days-of-Code
 
-In this repo, I am challenging myself to code for 100 days straight. Solving problems along the way to improve my skills in languages of my choosing. I will solve coding challenges from various sites (codewars, beecrowd, frontendMentors etc) within these 100 days.
+Welcome to my 100 Days of Code challenge repository! This is where I will document my journey of coding for 100 consecutive days. The purpose of this challenge is to improve my coding skills, develop good coding habits, and work on personal coding projects as well as coding challenge from various sites including (codewars, beecrowd, frontendMentors etc) using a consistent language or multiple languages.
 
-## Tasks
+## Motivation
 
-## CodeWars Challenges
+The motivation behind taking up this challenge is to dedicate consistent time and effort towards coding every day. By committing to this challenge, I aim to enhance my programming knowledge, explore new technologies, and strengthen my problem-solving abilities.
 
-**Python**
+## Rules
 
-*if we list all the natural numbers below 10 that are multiples of 3 0r 5, we get **3, 5, 6, 9**. The sum of these multiples is **23***
-   - finished the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.    - Additionally, if the number is negative, return 0
-   - Note: If the number is a multiple of both 3 and 5, only count it once.
+ - Code every day for the next 100 days.
+ - Document the progress, challenges faced, and lessons learned each day.
+
+## Progress Log
+
+I will maintain a daily progress log to track my coding activities, challenges, and achievements. You can find the log in the [progress](progress/) directory.
+
+
+Happy coding! 💻🚀
