@@ -34,3 +34,18 @@
 
 *Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.*
   The binary number returned should be a string.
+
+**04. Regex validate PIN code**
+
+*ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.*
+
+  If the function is passed a valid PIN string, return true, else return       false.
+
+**05. Stop gninnipS My sdroW!**
+
+*Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.*
+
+  Examples:
+    spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" 
+    spinWords( "This is a test") => returns "This is a test" 
+    spinWords( "This is another test" )=> returns "This is rehtona test"
