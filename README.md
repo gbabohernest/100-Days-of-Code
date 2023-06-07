@@ -16,4 +16,5 @@ The motivation behind taking up this challenge is to dedicate consistent time an
 I will maintain a daily progress log to track my coding activities, challenges, and achievements. You can find the log in the [progress](progress/) directory.
 
 
-Happy coding! 💻🚀
+
+Feel free to explore my repository and check out the projects I'll be working on during the challenge! Happy coding! 💻🚀

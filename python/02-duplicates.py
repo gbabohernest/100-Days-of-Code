@@ -7,7 +7,7 @@ def duplicate_count(text):
   count = 0
   values = set()
   
-  if text == ''
+  if text == '':
       return (count)
   
   text = text.lower()
