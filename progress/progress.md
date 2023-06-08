@@ -25,4 +25,17 @@
   
 - To further understand string built-in methods, I wrote a function that validate an ATM machine    pin code. Pin has to be five or six digits long and this function accepts a single string         argument and return True if PIN is Valid, False if not. Inorder this achieve this, I used one     of python's buit-in string methods call isdigit(), which checks a string and return True, if      the string contains only digit, and return False otherwise. I then used the len function to       check the len of the pin and store the value in a variable and later compare the value if it is   equal to 4 or 6. 
   
-  Today, was great and Tomorrow the journey continue 
+  Today, was great and Tomorrow the journey continue
+
+
+
+## Day 3: [June 8, 2023]
+
+**Today's Progress:**
+- Today, I learned a bit about python dictionary data structure. I was able to use it in a function to determine the order of braces in a string. Dictionaries in python are used to store elements in key-value pairs. It is similar to a real-life dictionary where we have words and their corresponding meaning. Here, the word is the key and the value is the definition of the word.
+
+ 
+**Thoughts:**
+- Third day of my 100 Days of Code challenge went well, I had some personal issues today, but in     the end I was able to do some challenges on codewars. I wrote a function in python that            validates a string of braces. This function accepts a string of braces and determine if the        order of the braces is valid or not using python list. I was able to validate the order of the     braces by implementing the stack data structure with list and also using python dictionary to      check the order of the braces.
+
+- 
