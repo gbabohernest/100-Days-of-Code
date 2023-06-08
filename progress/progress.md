@@ -36,10 +36,11 @@
 
 - I did some Javascript challenges from codewars
 - Wrote a function to validate an ATM PIN using regular expression in JavaScript
+- Working more with regular expression, I wrote a funtion that counts lowercase letter in a string and return the total number of times it appears
  
 **Thoughts:**
 - Third day of my 100 Days of Code challenge went well, I had some personal issues today, but in     the end I was able to do some challenges on codewars. I wrote a function in python that            validates a string of braces. This function accepts a string of braces and determine if the        order of the braces is valid or not using python list. I was able to validate the order of the     braces by implementing the stack data structure with list and also using python dictionary to      determine if the order of the braces is valid or not.
 
 - Working with regular expression in javascript, I created a function  **validatePIN** - that validates an ATM pin by checking if length of the pin is equal 4 or 6 and then check if the pin only contains only digits  using the regex **/^\d+$s** with the **test** method and passing in the pin as an argument to the method
 
-- 
+- Still using regular expression with javascript, I wrote a function that counts lowercase letter in a string and return the number of times it appears in the string using the match method. I created the regex and run it against the string and pass in the regex as an argument to the match method. match method returns an array of matches or null if there is no match. if there is a match, I return the len or if not, return 0
