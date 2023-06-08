@@ -17,3 +17,10 @@
   - *Example*
       - lowercaseCount("abc"); ===> 3
       - lowercaseCount("abcABC123"); ===> 3
+
+
+**02. Alternate capitalization**
+
+*Given a string, capitalize the letters that occupy even indexes and odd indexes separately, and return as shown below. Index 0 will be considered even.*
+  - **Example**
+     - capitalize("abcdef") = ['AbCdEf', 'aBcDeF']
