@@ -1,8 +1,9 @@
 /** 
-  validatePIN - validate an ATM machine pin
-  @Description: ATM machine allows 4 or 6
+  * validatePIN - validate an ATM machine pin
+  * @pin: pin to validate
+  * @Description: ATM machine allows 4 or 6
                 digit PIN codes, nothing else
-  return: True if PIN is valid
+  * return: True if PIN is valid
           False if PIN is invalid
 */
 
