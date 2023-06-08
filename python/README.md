@@ -45,7 +45,20 @@
 
 *Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.*
 
-  Examples:
-    spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" 
-    spinWords( "This is a test") => returns "This is a test" 
-    spinWords( "This is another test" )=> returns "This is rehtona test"
+  **Examples:**
+   - spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" 
+   - spinWords( "This is a test") => returns "This is a test" 
+   - spinWords( "This is another test" )=> returns "This is rehtona test"
+
+**06. Valid Braces**
+
+*Write a function that takes a string of braces, and determines if the order of the braces is valid. It should return true if the string is valid, and false if it's invalid.*
+
+ - All input strings will be nonempty, and will only consist of parentheses, brackets and curly     braces: ()[]{}.
+
+   **Example**
+    - "(){}[]"   =>  True
+    - "([{}])"   =>  True
+    - "(}"       =>  False
+    - "[(])"     =>  False
+    - "[({})](]" =>  False
