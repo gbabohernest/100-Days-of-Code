@@ -50,7 +50,7 @@
 
 - I learned about string and array in Javascript and how to iterate over them. I wrote a function that takes a string argument and split that string into an array using the string method **split** which splits a string and return an array. Using the array method forEach, I accessed the index of each element in the array return by split method. And then check if the index is 0 or if the index modules 2 is equal to 0, in this case it is an even index, then change the character at that index to uppercase and push it to the even array. To get the odd element at index, i checked if the index modules 2 is not equal to 0.
 
-## Day 3: [June 8, 2023]
+## Day 4: [June 9, 2023]
 
 **Today's Progress:**
 
