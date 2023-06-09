@@ -8,13 +8,13 @@ The motivation behind taking up this challenge is to dedicate consistent time an
 
 ## Rules
 
- - Code every day for the next 100 days.
- - Document the progress, challenges faced, and lessons learned each day.
+- Code every day for the next 100 days.
+- Document the progress, challenges faced, and lessons learned each day.
 
 ## Progress Log
 
 I will maintain a daily progress log to track my coding activities, challenges, and achievements. You can find the log in the [progress](progress/) directory.
 
+Feel free to explore my repository and check out the projects I'll be working on during the challenge!
 
-
-Feel free to explore my repository and check out the projects I'll be working on during the challenge! Happy coding! 💻🚀
+Happy coding! 💻🚀

@@ -1,7 +1,12 @@
-# A codewar challenge
-# Return the number of times a distinct
-# case-insensitive alphabetic character
-# and numberic digits occur in an input string
+"""
+  duplicate_count - Return the number of times 
+                    a distinct case-insensitive
+                    alphabetic character and numeric
+                    digits occur in an input string
+  @text: string arg
+  return: total count
+  
+"""
 
 def duplicate_count(text):
   count = 0

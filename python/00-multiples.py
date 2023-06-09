@@ -1,7 +1,9 @@
-# A codewar challenge - multiples of 3 or 5
-# Returns the sum of all multiples of 3 or 5 below number
-# Return 0 if the number is negative
-
+"""
+  solution - returns the sum of all multiples of 3 or 5
+  @number: int args
+  Return: sum of all multiples of 3 or 5
+          0 if number is negative
+"""
 def solution(number):
   sum = 0
   if number < 0:
