@@ -59,3 +59,7 @@
 **Thoughts**
 
 - Working with list and dictionary in python gives you the ability to do cool stuff with data. It allows you to iterate over a bunch of data and performs different kinds of operation on them. With dictionary, you can store data in key value pairs. There are lots of application scenarios with list and dictionary and am excited to work with them.
+
+## Day 5: [June 10, 2023]
+
+**Today's Progress:**
