@@ -80,3 +80,20 @@ _Create a function taking a positive integer between 1 and 3999 (both included) 
 **09. Is a number prime?**
 
 _Define a function that takes an integer argument and returns a logical value true or false depending on if the integer is a prime._
+
+**10. who likes it**
+_Write a function that takes a list containing the names of people that like an item and return a display text as shown in example below._
+
+- [] --> "no one likes this"
+- ["Peter"] --> "Peter likes this"
+- ["Jacob", "Alex"] --> "Jacob and Alex like this"
+- ["Max", "John", "Mark"] --> "Max, John and Mark like this"
+- ["Alex", "Jacob", "Mark", "Max"] --> "Alex, Jacob and 2 others like this"
+
+**11. Find the Parity Outlier**
+_You are given an array (which will have a length of at least 3, but could be very large) containing integers. The array is either entirely comprised of odd integers or entirely comprised of even integers except for a single integer N. Write a method that takes the array as an argument and returns this "outlier" N._
+**Example**
+_[2, 4, 0, 100, 4, 11, 2602, 36]_
+_Should return: 11 (the only odd number)_
+_[160, 3, 1719, 19, 11, 13, -21]_
+_Should return: 160 (the only even number)_
