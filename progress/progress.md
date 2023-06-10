@@ -65,9 +65,13 @@
 **Today's Progress:**
 
 - I continue to work on improving my skills in python. Today, I started with a challenge on codewars that checks if a number is a prime number. I was asked to write a function that checks if a number is a prime number and return True if it is else False.
+
 - Still solving codewars python challenges, I wrote a function that takes a list containing the names of people that like an item and return a display text as shown in example below.
+
   - [] --> "no one likes this"
   - ["Peter"] --> "Peter likes this"
   - ["Jacob", "Alex"] --> "Jacob and Alex like this"
   - ["Max", "John", "Mark"] --> "Max, John and Mark like this"
   - ["Alex", "Jacob", "Mark", "Max"] --> "Alex, Jacob and 2 others like this"
+
+- Find the Parity Outlier in the list of integers and return the outlier. Using list, I created this function that return the outlier from a list of integers that is either entirely comprised of odd or even integers.
