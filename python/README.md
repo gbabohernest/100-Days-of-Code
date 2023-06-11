@@ -97,3 +97,11 @@ _[2, 4, 0, 100, 4, 11, 2602, 36]_
 _Should return: 11 (the only odd number)_
 _[160, 3, 1719, 19, 11, 13, -21]_
 _Should return: 160 (the only even number)_
+
+**Human Readable Time**
+
+_Write a function, which takes a non-negative integer (seconds) as input and returns the time in a human-readable format (HH:MM:SS)_
+
+- HH = hours, padded to 2 digits, range: 00 - 99
+- MM = minutes, padded to 2 digits, range: 00 - 59
+- SS = seconds, padded to 2 digits, range: 00 - 59
