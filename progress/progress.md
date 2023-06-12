@@ -102,4 +102,4 @@
 
 **Thoughts**
 
-- During the development of this project, I was able to work with the date object in javascript. The date object can be a little tricky especially when you are starting out.
+- During the development of this project, I was able to work with the date object in javascript. The date object can be a little tricky especially when you are starting out. Using the date object, I was able to access the various methods to get hour, minutes and seconds as well as the weekday, month, year and also date. With these methods, I was able to implement the logic of getting the clock to function correctly. I also learned to work with Document object model, which is a tree like structure of all the elements on a web page. It keeps track of all the different elements on a web page. Using the DOM,I was able to update the time and date in the browser dynamically.
