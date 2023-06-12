@@ -1,0 +1,81 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply;
+  display: grid;
+  place-items: center;
+  font-family: "Roboto Mono", monospace;
+  min-height: 100vh;
+  color: rgb(218, 202, 202);
+}
+
+main {
+  font-weight: bold;
+}
+
+.flex-parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.timer {
+  padding: 1rem;
+  padding-bottom: 0.03rem;
+}
+
+.timer h4 {
+  font-size: 3rem;
+  color: #0e78c4;
+}
+
+.date {
+  color: #0e1c36;
+}
+
+.date h6 {
+  font-size: 1.325rem;
+}
+
+@media screen and (min-width: 62.5em) {
+  .timer h4 {
+    font-size: 5rem;
+  }
+
+  .date h6 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and ((min-width: 40.625em) and (max-width:62.4375em)) {
+  .timer h4 {
+    font-size: 4rem;
+  }
+
+  .date h6 {
+    font-size: 2rem;
+  }
+}
