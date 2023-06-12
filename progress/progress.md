@@ -75,3 +75,20 @@
   - ["Alex", "Jacob", "Mark", "Max"] --> "Alex, Jacob and 2 others like this"
 
 - Find the Parity Outlier in the list of integers and return the outlier. Using list, I created this function that return the outlier from a list of integers that is either entirely comprised of odd or even integers.
+
+**Thoughts**
+
+- Solving these python challenges on code wars is helping think and it is improving my skills in python. It is helping work with list and other data structures in python to perform different operations on data. It is a great learning resource and I am progressing gradually.
+
+## Day 6: [June 11, 2023]
+
+**Today's Progress:**
+
+- Solve code wars 5 kyu in python
+- Write a function that takes a non-negative integer as input and returns the time in a human readable format (HH:mm:ss)
+
+**Thoughts**
+
+- This challenge was a food for thought. It was kind of difficult in the beginner to figure it out. In the end I came up with an algorithm to solve it. Taking the seconds as input, I had to find the hours, minutes and seconds from the input. To find the hours, using floor division, I divide the seconds given as input by the number of seconds that make up an hour. To find the minutes and seconds. I also take the seconds from the input and modulus it by the number of seconds that make up and hour and using floor division, I divided it by 60 because 60 seconds make a minute. As for the seconds, I modulus it by the number of seconds that make up an hours and then the reminder was also modulus by 60 to account for the number of seconds.
+
+- This was a fun challenge and a brain teaser. It is a 5 kyu python challenge.
