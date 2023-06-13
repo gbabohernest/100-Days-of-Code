@@ -98,10 +98,18 @@ _Should return: 11 (the only odd number)_
 _[160, 3, 1719, 19, 11, 13, -21]_
 _Should return: 160 (the only even number)_
 
-**Human Readable Time**
+**11. Human Readable Time**
 
 _Write a function, which takes a non-negative integer (seconds) as input and returns the time in a human-readable format (HH:MM:SS)_
 
 - HH = hours, padded to 2 digits, range: 00 - 99
 - MM = minutes, padded to 2 digits, range: 00 - 59
 - SS = seconds, padded to 2 digits, range: 00 - 59
+
+**12. Scramblies**
+
+- Complete the function scramble(str1, str2) that returns true if a portion of str1 characters can be rearranged to match str2, otherwise returns false. -
+
+- Notes:
+  Only lower case letters will be used (a-z). No punctuation or digits will be included.
+  Performance needs to be considered.
