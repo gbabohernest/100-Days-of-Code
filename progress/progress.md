@@ -103,3 +103,11 @@
 **Thoughts**
 
 - During the development of this project, I was able to work with the date object in javascript. The date object can be a little tricky especially when you are starting out. Using the date object, I was able to access the various methods to get hour, minutes and seconds as well as the weekday, month, year and also date. With these methods, I was able to implement the logic of getting the clock to function correctly. I also learned to work with Document object model, which is a tree like structure of all the elements on a web page. It keeps track of all the different elements on a web page. Using the DOM,I was able to update the time and date in the browser dynamically.
+
+## Day 8 [June 13, 2023]
+
+**Today's Progress**
+
+- I learned more about python data structures to improve my understanding of them. I improved my understanding of of list comprehension in python. The various ways we can use list comprehension to create a more concise list in python.
+
+- Solve some 6 & 5 kyu challenges on code wars
