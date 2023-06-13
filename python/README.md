@@ -113,3 +113,14 @@ _Write a function, which takes a non-negative integer (seconds) as input and ret
 - Notes:
   Only lower case letters will be used (a-z). No punctuation or digits will be included.
   Performance needs to be considered.
+
+**13. Build Tower**
+_Build a pyramid-shaped tower, as an array/list of strings, given a positive integer number of floors. A tower block is represented with "\*" \_character._
+
+- For example, a tower with 3 floors looks like this:
+
+  [
+  " * ",
+  " *** ",
+  "*****"
+  ]
