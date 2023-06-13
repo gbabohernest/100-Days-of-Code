@@ -111,3 +111,7 @@
 - I learned more about python data structures to improve my understanding of them. I improved my understanding of of list comprehension in python. The various ways we can use list comprehension to create a more concise list in python.
 
 - Solve some 6 & 5 kyu challenges on code wars
+
+**Thoughts**
+
+- Today learning session was great. I learned new concepts and test knowledge with some python code challenges. I solved 4 different problems, 3 of which of 6 kyu level and one 5 kyu level. It was a good learning experience.
