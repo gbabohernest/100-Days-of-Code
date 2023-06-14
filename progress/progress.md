@@ -115,3 +115,15 @@
 **Thoughts**
 
 - Today learning session was great. I learned new concepts and test knowledge with some python code challenges. I solved 4 different problems, 3 of which of 6 kyu level and one 5 kyu level. It was a good learning experience.
+
+## Day 8 [June 13, 2023]
+
+**Today's Progress**
+
+- I practice my javascript skills by solving some code wars challenges.
+- I wrote a function that take any non-negative integer as an argument and return it with its digits in descending order.
+- I wrote a function that splits a string into pairs of two characters and if the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('\_').
+
+**Thoughts**
+
+- Solving coding exercises these past days has help me understand some new concepts as well as remembering some old ones. I believe it has help with my confidence and also improving my problem solving skills. I know it is still a challenge but am up for it and gradually I will get there. :)

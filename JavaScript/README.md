@@ -31,7 +31,7 @@ _Complete the solution so that it splits the string into pairs of two characters
   'abc' => ['ab', 'c_']
   'abcdef' => ['ab', 'cd', 'ef']
 
-**Descending Order**
+**04. Descending Order**
 
 _Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number._
 
@@ -42,7 +42,7 @@ _Your task is to make a function that can take any non-negative integer as an ar
 
   Input: 123456789 Output: 987654321
 
-**06- Playing with digits**
+**05- Playing with digits**
 
 - Given a positive integer n written as abcd... (a, b, c, d... being digits) and a positive integer p\*
 
