@@ -116,7 +116,7 @@
 
 - Today learning session was great. I learned new concepts and test knowledge with some python code challenges. I solved 4 different problems, 3 of which of 6 kyu level and one 5 kyu level. It was a good learning experience.
 
-## Day 8 [June 13, 2023]
+## Day 9 [June 14, 2023]
 
 **Today's Progress**
 
