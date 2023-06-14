@@ -28,5 +28,16 @@ _Given a string, capitalize the letters that occupy even indexes and odd indexes
 _Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('\_')._
 
 - **Examples:**
-- 'abc' => ['ab', 'c_']
-- 'abcdef' => ['ab', 'cd', 'ef']
+  'abc' => ['ab', 'c_']
+  'abcdef' => ['ab', 'cd', 'ef']
+
+**Descending Order**
+
+_Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number._
+
+- _Examples:_
+  Input: 42145 Output: 54421
+
+  Input: 145263 Output: 654321
+
+  Input: 123456789 Output: 987654321
