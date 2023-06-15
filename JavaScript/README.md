@@ -80,3 +80,9 @@ _In a factory a printer prints labels for boxes. For one kind of boxes the print
 _Implement a function that accepts 3 integer values a, b, c. The function should return true if a triangle can be built with the sides of given length and false in any other case._
 
 - (In this case, all triangles must have surface greater than 0 to be accepted).
+
+**08- Square(n) Sum**
+
+_Complete the square sum function so that it squares each number passed into it and then sums the results together._
+
+- For example, for [1, 2, 2] it should return 9 because 12+22+22=91^2 + 2^2 + 2^2 = 912+22 +22=9.
