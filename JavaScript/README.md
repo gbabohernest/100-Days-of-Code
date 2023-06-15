@@ -74,3 +74,9 @@ _In a factory a printer prints labels for boxes. For one kind of boxes the print
 
 - s="aaaxbbbbyyhwawiwjjjwwm"
 - printer_error(s) => "8/22"
+
+**07- is this a triangle**
+
+_Implement a function that accepts 3 integer values a, b, c. The function should return true if a triangle can be built with the sides of given length and false in any other case._
+
+- (In this case, all triangles must have surface greater than 0 to be accepted).
