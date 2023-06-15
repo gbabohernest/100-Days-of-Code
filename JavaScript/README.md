@@ -86,3 +86,15 @@ _Implement a function that accepts 3 integer values a, b, c. The function should
 _Complete the square sum function so that it squares each number passed into it and then sums the results together._
 
 - For example, for [1, 2, 2] it should return 9 because 12+22+22=91^2 + 2^2 + 2^2 = 912+22 +22=9.
+
+**09- Convert string to camel case**
+
+_Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case). The next words should be always capitalized._
+
+- Examples
+
+- "the-stealth-warrior" gets converted to "theStealthWarrior"
+
+- "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
+
+- "The_Stealth-Warrior" gets converted to "TheStealthWarrior"
