@@ -143,3 +143,5 @@
 - I also created a function that take in a string and convert it to a camal case string. This task was also done using regular expression with some strings method. It was a great way to learn and implement some basic regular expression pattern.
 
 **Thoughts**
+
+- solving these javascript kyu is a great way to practice my skills and become better at it. It has helped me and am progressing on a daily. Looking forward to solving more and more javascript kyu.
