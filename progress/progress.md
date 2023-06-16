@@ -140,4 +140,6 @@
 
 - I solved this using regular expression which is an object in javascript that is used to match character combinations in strings.
 
+- I also created a function that take in a string and convert it to a camal case string. This task was also done using regular expression with some strings method. It was a great way to learn and implement some basic regular expression pattern.
+
 **Thoughts**
