@@ -127,3 +127,12 @@
 **Thoughts**
 
 - Solving coding exercises these past days has help me understand some new concepts as well as remembering some old ones. I believe it has help with my confidence and also improving my problem solving skills. I know it is still a challenge but am up for it and gradually I will get there. :)
+
+## Day 10 [June 15, 2023]
+
+**Today's Progress**
+
+- Work on solving some kyu in javascript
+- Wrote a function name descendingOrder that take any non-negative integer as an argument and return it with its digits in descending order. I was able to achieve this by calling the to string method on the integer argument, which turn the integer to a string and then I called the split method on the string. The split method return an array containing each element in the string. I then sort the string by calling the sort method and finally i call the reverse method to reverse it and called the join method to join them all together as a single string. Knowing that the task was asking for a number to be return, I used the + operator next to the name of the string to convert it back to number. This works only if all the characters in the string are digits.
+
+**Thoughts**
