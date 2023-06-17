@@ -105,8 +105,8 @@ _Complete the solution so that it returns true if the first argument(string) pas
 
 - Examples:
 
-  solution('abc', 'bc') // returns true
-  solution('abc', 'd') // returns false
+  - solution('abc', 'bc') // returns true
+  - solution('abc', 'd') // returns false
 
 **11- Unique in order**
 
@@ -116,3 +116,17 @@ _Implement the function unique_in_order which takes as argument a sequence and r
 - uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
 - uniqueInOrder('ABBCcAD') == ['A', 'B', 'C', 'c', 'A', 'D']
 - uniqueInOrder([1,2,2,3,3]) == [1,2,3]
+
+**12- Beginner Series #2 Clock**
+
+_Clock shows **h** hours, **m** minutes and **s** seconds after midnight_
+
+- Your task is to write a function which returns the time since midnight in milliseconds
+
+- **Example**
+
+  - h = 0
+  - m = 1
+  - s = 1
+
+  - result = 61000
