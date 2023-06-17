@@ -145,3 +145,29 @@
 **Thoughts**
 
 - solving these javascript kyu is a great way to practice my skills and become better at it. It has helped me and am progressing on a daily. Looking forward to solving more and more javascript kyu.
+
+## Day 11 [June 16, 2023]
+
+**Today's Progress**
+
+- I focused on JavaScript challenges on code wars
+- Progress were made solving various kyu levels.
+- These kyu were mostly array related.
+
+**Thoughts**
+
+- I feel am progressing on a daily and am happy for the progress. I plan to test my knowledge by picking more challenging task or picking a figma design and build it from the ground up.
+
+## Day 12 [June 17, 2023]
+
+**Today's Progress**
+
+- I've been focusing on sharpening my JavaScript skills through CodeWars katas.
+
+- 've tackled katas of various difficulty levels, ranging from level 8 to level 5. These katas have allowed me to practice solving coding problems, honing my problem-solving abilities and familiarizing myself with different JavaScript concepts and syntax.
+
+**Thoughts**
+
+- By working on katas at level 8, I reinforced my understanding of basic JavaScript concepts and syntax. It helped me solidify my grasp of fundamental programming techniques.
+
+- Moving up to level 7 katas, I delved deeper into JavaScript and encountered more complex challenges. These katas required me to apply my knowledge of conditionals, loops, arrays, and functions in creative ways.
