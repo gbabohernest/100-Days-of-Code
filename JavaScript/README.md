@@ -130,3 +130,18 @@ _Clock shows **h** hours, **m** minutes and **s** seconds after midnight_
   - s = 1
 
   - result = 61000
+
+**13- Calculate average**
+
+_Write a function which calculates the average of the numbers in a given list._
+
+- Note: Empty arrays should return 0
+
+**14- Invert values**
+
+_Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives_
+
+- **Examples**
+  invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
+  invert([1,-2,3,-4,5]) == [-1,2,-3,4,-5]
+  invert([]) == []
