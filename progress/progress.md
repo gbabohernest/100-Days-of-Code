@@ -164,10 +164,22 @@
 
 - I've been focusing on sharpening my JavaScript skills through CodeWars katas.
 
-- 've tackled katas of various difficulty levels, ranging from level 8 to level 5. These katas have allowed me to practice solving coding problems, honing my problem-solving abilities and familiarizing myself with different JavaScript concepts and syntax.
+- I've tackled katas of various difficulty levels, ranging from level 8 to level 5. These katas have allowed me to practice solving coding problems, honing my problem-solving abilities and familiarizing myself with different JavaScript concepts and syntax.
 
 **Thoughts**
 
 - By working on katas at level 8, I reinforced my understanding of basic JavaScript concepts and syntax. It helped me solidify my grasp of fundamental programming techniques.
 
 - Moving up to level 7 katas, I delved deeper into JavaScript and encountered more complex challenges. These katas required me to apply my knowledge of conditionals, loops, arrays, and functions in creative ways.
+
+## Day 13 [June 18, 2023]
+
+**Today's Progress**
+
+- I successfully completed level 4 JavaScript katas on CodeWars, utilizing array methods like map and reduce, as well as string methods such as slice, trimRight, join, and split."
+
+- Also, I solved challenges of different kinds, utilizing various methods. I worked with some math methods to solve a challenge which require me to find the sum of all integers given an as arguments between and including both of them. I used the Math.min methods, and also Math.max method. using a for loop I was able to get the sum of all numbers from the min number up to the max number included.
+
+**Thoughts**
+
+- I will continue challenge myself with coding exercises and projects, which I will soon start working on, to help me skilled up. I am looking forward to more challenging exercises and projects in the near future.
