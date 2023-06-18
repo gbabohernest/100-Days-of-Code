@@ -169,3 +169,15 @@ _Can you find the needle in the haystack?_
 **17- Fake Binary**
 
 _Given a string, replace any digit less then 5 with 0 and digits equal to 5 or greater with 1_
+
+**18- Strip Comments**
+
+_Complete the solution so that it strips all text that follows any of a set of comment markers passed in. Any whitespace at the end of the line should also be stripped out._
+
+- Example:
+
+- Given an input string of:
+
+  apples, pears # and bananas
+  grapes
+  bananas !apples
