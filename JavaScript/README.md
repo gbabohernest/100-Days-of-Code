@@ -145,3 +145,27 @@ _Given a set of numbers, return the additive inverse of each. Each positive beco
   invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
   invert([1,-2,3,-4,5]) == [-1,2,-3,4,-5]
   invert([]) == []
+
+**15- Sum of Numbers**
+
+_Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b._
+
+- Note: a and b are not ordered!
+
+**16- A needle in the Haystack**
+
+_Can you find the needle in the haystack?_
+
+- Write a function findNeedle() that takes an array full of junk but containing one "needle"
+
+- After your function finds the needle it should return a message (as a string) that says:
+
+- "found the needle at position " plus the index it found the needle, so:
+
+- Example(Input --> Output)
+
+- ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"] --> "found the needle at position 5"
+
+**17- Fake Binary**
+
+_Given a string, replace any digit less then 5 with 0 and digits equal to 5 or greater with 1_
