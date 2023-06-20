@@ -1,11 +1,20 @@
-@use "../utils/" as u;
 .header {
-  @include u.breakpoints-up(large) {
-    display: flex;
-    justify-content: space-between;
+  &__tittle {
   }
 }
 
 .toggle {
   border: none;
+
+  label {
+  }
+  &__container {
+    input[type="radio"] {
+    }
+    &__bg {
+    }
+
+    &__btn {
+    }
+  }
 }

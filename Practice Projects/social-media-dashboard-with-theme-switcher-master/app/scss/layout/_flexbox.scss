@@ -1,0 +1,8 @@
+@use "../utils/" as u;
+
+.header {
+  @include u.breakpoints-up(large) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
