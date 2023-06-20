@@ -1,0 +1,11 @@
+@use "../utils/" as u;
+
+.container {
+  max-width: u.rem(1110);
+  padding-inline: u.rem(25);
+  margin-inline: auto;
+
+  @include u.breakpoints-up(large) {
+    padding: 0;
+  }
+}
