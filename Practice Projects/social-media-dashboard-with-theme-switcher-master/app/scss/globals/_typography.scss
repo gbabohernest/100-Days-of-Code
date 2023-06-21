@@ -19,3 +19,10 @@ a:active {
 label {
   font-size: u.rem(13);
 }
+
+.card {
+  h3,
+  p {
+    margin: 0;
+  }
+}

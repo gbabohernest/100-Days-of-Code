@@ -1,5 +1,6 @@
 @use "../utils/" as u;
 
+/*** not in use right now*****
 .toggle {
   display: grid;
   grid-template-columns: 1fr u.rem(60) 1fr;
@@ -51,3 +52,11 @@ grid-row: 1/1;
 
 width: 48px;
 */
+
+.grid {
+  display: grid;
+  gap: u.rem(18);
+  @include u.breakpoints-up(medium) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

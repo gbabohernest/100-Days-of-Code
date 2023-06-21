@@ -1,4 +1,49 @@
 @use "../utils/" as u;
+
 .card {
-  padding: u.rem(20);
+  background: var(--dark-card-bg);
+  color: var(--dark-white-text);
+  //color: var(--dark-blue-text);
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: u.rem(16);
+  padding: u.rem(12);
+  border-radius: u.rem(7);
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: u.rem(7);
+
+    &--username {
+      //dark theme color preference
+      color: var(--dark-blue-text);
+      font-size: u.rem(12);
+    }
+  }
+
+  &__data {
+    h3 {
+      font-size: u.rem(40);
+      font-weight: 700;
+    }
+    p {
+      font-size: u.rem(11);
+      text-transform: uppercase;
+      color: var(--dark-blue-text); //dark theme color scheme
+      letter-spacing: u.rem(3);
+    }
+  }
+
+  &__matrix {
+    img {
+      display: inline-block;
+      padding-right: u.rem(5);
+    }
+  }
 }
