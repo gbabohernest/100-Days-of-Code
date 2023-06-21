@@ -41,27 +41,92 @@
     <header class="header container">
       <div class="header__title">
         <h1>Social Media Dashboard</h1>
-        Total Followers: 23,004 Dark Mode
+        <span class="header__title__total-followers">
+          Total Followers: 23,004
+        </span>
       </div>
       <fieldset class="toggle" aria-label="theme switcher" role="radiogroup">
-        <label for="dark mode">Dark</label>
+        <label for="dark">Dark Mode</label>
+        <!-- <label for="os">Default</label> -->
+        <label for="light">Light Mode</label>
         <div class="toggle__container">
-          <input type="radio" name="theme" id="dark mode" />
-          <input type="radio" name="theme" id="os" checked />
-          <input type="radio" name="theme" id="light mode" />
-          <span aria-hidden="true" class="toggle__bg"></span>
-          <span aria-hidden="true" class="toggle__btn"></span>
+          <input type="radio" name="theme" id="dark" />
+          <input type="radio" name="theme" id="light" />
+          <!-- <input type="radio" name="theme" id="os" checked /> -->
+          <span aria-hidden="true" class="toggle__container__bg"></span>
+          <span aria-hidden="true" class="toggle__container__btn"></span>
         </div>
-        <label for="os">System Default</label>
-        <label for="light mode">Light</label>
       </fieldset>
     </header>
     <main>
-      @nathanf 1987 Followers 12 Today @nathanf 1044 Followers 99 Today
-      @realnathanf 11k Followers 1099 Today Nathan F. 8239 Subscribers 144 Today
-      Overview - Today Page Views 87 3% Likes 52 2% Likes 5462 2257% Profile
-      Views 52k 1375% Retweets 117 303% Likes 507 553% Likes 107 19% Total Views
-      1407 12%
+      <section class="container grid">
+        <div class="card">
+          <div class="card__social">
+            <div class="card__social--platform">
+              <img src="images/icon-facebook.svg" alt="facebook icon" />
+            </div>
+            <div class="card__social--username">
+              <p>@nathanf</p>
+            </div>
+          </div>
+          <div class="card__data">
+            <h2>1987</h2>
+            <p>Followers</p>
+          </div>
+          <div class="card__matrix">12 Today</div>
+        </div>
+
+        <div class="card">
+          <div class="card__social">
+            <div class="card__social--platform">
+              <img src="images/icon-twitter.svg" alt="twitter icon" />
+            </div>
+            <div class="card__social--username">
+              <p>@nathanf</p>
+            </div>
+          </div>
+          <div class="card__data">
+            <h2>1044</h2>
+            <p>Followers</p>
+          </div>
+          <div class="card__matrix">99 Today</div>
+        </div>
+
+        <div class="card">
+          <div class="card__social">
+            <div class="card__social--platform">
+              <img src="images/icon-instagram.svg" alt="instagram icon" />
+            </div>
+            <div class="card__social--username">
+              <p>@realnathanf</p>
+            </div>
+          </div>
+          <div class="card__data">
+            <h2>11k</h2>
+            <p>Followers</p>
+          </div>
+          <div class="card__matrix">1099 Today</div>
+        </div>
+
+        <div class="card">
+          <div class="card__social">
+            <div class="card__social--platform">
+              <img src="images/icon-youtube.svg" alt="youtube icon" />
+            </div>
+            <div class="card__social--username">
+              <p>Nathan F.</p>
+            </div>
+          </div>
+          <div class="card__data">
+            <h2>8239</h2>
+            <p>Subscribers</p>
+          </div>
+          <div class="card__matrix">144 Today</div>
+        </div>
+      </section>
+      Followers Overview - Today Page Views 87 3% Likes 52 2% Likes 5462 2257%
+      Profile Views 52k 1375% Retweets 117 303% Likes 507 553% Likes 107 19%
+      Total Views 1407 12%
     </main>
 
     <div class="attribution">
