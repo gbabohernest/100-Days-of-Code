@@ -1,9 +1,9 @@
 @use "../utils/" as u;
 
 .container {
-  max-width: u.rem(1110);
-  padding-inline: u.rem(25);
+  width: min(100% - u.rem(25), u.rem(1110));
   margin-inline: auto;
+  margin-bottom: u.rem(46);
 
   @include u.breakpoints-up(large) {
     padding: 0;

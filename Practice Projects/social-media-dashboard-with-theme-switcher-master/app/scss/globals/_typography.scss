@@ -8,10 +8,14 @@ h3 {
 
 h1 {
   font-size: clamp(u.rem(24), u.rem(16) + 2vw, u.rem(28));
+  margin-bottom: u.rem(3);
 }
 
 a,
 a:visited,
 a:active {
   text-decoration: none;
+}
+label {
+  font-size: u.rem(13);
 }

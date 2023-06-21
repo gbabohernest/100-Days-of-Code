@@ -1,0 +1,28 @@
+@use "../utils/" as u;
+
+.toggle {
+  display: grid;
+  grid-template-columns: 1fr u.rem(60) 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: u.rem(12);
+
+  label {
+    &[for="dark"] {
+      grid-column: 1 / 2;
+      justify-self: end;
+    }
+    &[for="light"] {
+      grid-column: 3 / 4;
+    }
+
+    &[for="os"] {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      justify-self: center;
+    }
+  }
+  &__container {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+}

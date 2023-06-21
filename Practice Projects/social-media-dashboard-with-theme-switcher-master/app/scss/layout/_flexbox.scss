@@ -4,5 +4,6 @@
   @include u.breakpoints-up(medium) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 }
