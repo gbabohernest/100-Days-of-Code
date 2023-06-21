@@ -26,3 +26,28 @@
     grid-row: 1 / 2;
   }
 }
+
+/*
+toggle new try styles for grid parent
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr;
+gap: 5px;
+
+
+ grid child element
+ label dark
+ justify-self: end;
+grid-column: 1/1;
+
+grid child element
+label light
+grid-column: 1/1;
+display: none;
+
+
+toggle__container: styles
+grid-column: 2;
+grid-row: 1/1;
+
+width: 48px;
+*/

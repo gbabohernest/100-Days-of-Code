@@ -7,3 +7,14 @@
     align-items: center;
   }
 }
+
+.toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+
+  @include u.breakpoints-up(medium) {
+    gap: u.rem(12);
+  }
+}
