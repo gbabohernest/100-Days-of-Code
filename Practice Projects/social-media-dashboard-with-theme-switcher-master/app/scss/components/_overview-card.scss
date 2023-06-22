@@ -1,0 +1,28 @@
+@use "../utils/" as u;
+
+.overview-card {
+  display: flex;
+  flex-direction: column;
+  padding: u.rem(5) u.rem(16) 0;
+
+  &__social-review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: u.rem(12);
+  }
+
+  &__social-records {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: u.rem(12);
+  }
+  p {
+    font-size: u.rem(12);
+  }
+  h4 {
+    font-size: u.rem(24);
+    margin: 0;
+  }
+}

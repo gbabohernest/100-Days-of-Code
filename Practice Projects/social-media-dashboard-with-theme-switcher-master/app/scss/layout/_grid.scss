@@ -60,3 +60,14 @@ width: 48px;
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+//create mixins for these
+.grid2 {
+  display: grid;
+  gap: u.rem(18);
+
+  @include u.breakpoints-up(medium) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}

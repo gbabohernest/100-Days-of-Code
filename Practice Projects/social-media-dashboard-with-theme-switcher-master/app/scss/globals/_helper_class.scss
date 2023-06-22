@@ -9,3 +9,22 @@
     padding: 0;
   }
 }
+
+.up-arrow {
+  color: var(--lime-green);
+}
+.down-arrow {
+  color: var(--bright-red);
+}
+
+.bg-color {
+  background: var(--dark-card-bg);
+  color: var(--dark-white-text);
+  border-radius: u.rem(7);
+}
+
+.card_info_text_dark {
+  color: var(--dark-blue-text); //dark theme color scheme
+}
+
+//.card_info_text_light

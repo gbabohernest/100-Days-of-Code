@@ -1,9 +1,8 @@
 @use "../utils/" as u;
 
 .card {
-  background: var(--dark-card-bg);
-  color: var(--dark-white-text);
   //color: var(--dark-blue-text);
+  border-top: u.rem(3) solid;
   text-align: center;
 
   display: flex;
@@ -12,8 +11,6 @@
   flex-direction: column;
   gap: u.rem(16);
   padding: u.rem(12);
-  border-radius: u.rem(7);
-
   &__social {
     display: flex;
     justify-content: center;
@@ -21,8 +18,6 @@
     gap: u.rem(7);
 
     &--username {
-      //dark theme color preference
-      color: var(--dark-blue-text);
       font-size: u.rem(12);
     }
   }
@@ -35,7 +30,6 @@
     p {
       font-size: u.rem(11);
       text-transform: uppercase;
-      color: var(--dark-blue-text); //dark theme color scheme
       letter-spacing: u.rem(3);
     }
   }
@@ -43,7 +37,26 @@
   &__matrix {
     img {
       display: inline-block;
-      padding-right: u.rem(5);
+      padding-right: u.rem(3);
     }
+  }
+
+  &__facebook {
+    border-top-color: var(--facebook);
+  }
+  &__twitter {
+    border-top-color: var(--twitter);
+  }
+  /*
+  &__instagram {
+    border-image: linear-gradient(
+      to right,
+      var(--instagram-end) 0%,
+      var(--instagram-start) 98.02%
+    );
+  }*/
+
+  &__youtube {
+    border-top-color: var(--youtube);
   }
 }
