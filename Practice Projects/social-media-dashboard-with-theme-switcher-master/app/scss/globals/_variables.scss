@@ -54,9 +54,9 @@
     --small-text: var(--dark-blue-text);
     --card-bg: var(--dark-card-bg);
     --card-text-color: var(--dark-white-text);
-    //--card-hover
-    //total-follower-text-color
-    --toggle: var(--dark-white-text);
+    --toggle: var(--dark-blue-text);
+    --toggle-btn: var(--dark-bg);
+
     --toggle-bg: linear-gradient(
       225deg,
       var(--toggle-bg-end) 0%,

@@ -36,6 +36,7 @@ body.light {
   --toggle: var(--light-toggle);
   --toggle-bg: var(--light-toggle-bg);
   --toggle-btn: var(--light-toggle-btn);
+  --card-hover-color: var(--light-toggle-bg);
 }
 
 body.dark {
@@ -44,9 +45,10 @@ body.dark {
   --card-bg: var(--dark-card-bg);
   --small-text: var(--dark-blue-text);
   --card-text-color: var(--dark-white-text);
-  //--card-hover
-  //total-follower-text-color
-  --toggle: var(--dark-white-text);
+  --toggle: var(--dark-blue-text);
+  --toggle-btn: var(--dark-bg);
+  --card-hover: var(--dark-blue-text);
+
   --toggle-bg: linear-gradient(
     225deg,
     var(--toggle-bg-end) 0%,

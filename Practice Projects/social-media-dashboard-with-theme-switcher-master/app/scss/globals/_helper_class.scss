@@ -18,13 +18,12 @@
 }
 
 .bg-color {
-  background: var(--dark-card-bg);
-  color: var(--dark-white-text);
+  background: var(--card-bg);
+  color: var(--card-text-color);
   border-radius: u.rem(7);
+  cursor: pointer;
 }
 
-.card_info_text_dark {
-  color: var(--dark-blue-text); //dark theme color scheme
+.card_info_text {
+  color: var(--small-text);
 }
-
-//.card_info_text_light
