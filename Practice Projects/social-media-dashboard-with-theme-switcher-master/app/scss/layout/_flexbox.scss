@@ -2,18 +2,14 @@
 
 .header {
   @include u.breakpoints-up(medium) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include u.flex(row, space-between);
   }
 }
 
 .toggle {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include u.flex(row, space-between);
   margin: 0;
-
+  padding-inline: 0;
   @include u.breakpoints-up(medium) {
     gap: u.rem(12);
   }
