@@ -183,3 +183,93 @@
 **Thoughts**
 
 - I will continue challenge myself with coding exercises and projects, which I will soon start working on, to help me skilled up. I am looking forward to more challenging exercises and projects in the near future.
+
+## Day 14 [June 19, 2023]
+
+**Today's Progress**
+
+- I started working on a project from FrontEnd Mentor called Social-Media-Dashboard-with-theme-switcher. As the name goes, this project allow user to switcher between light and dark theme at anytime and also setting their prefer-color-scheme based on their operating system setting.
+
+- On the first day, I worked on the header component of the project. set up the markup and also the styles along with. The header component compresses of the site heading and the toggle btn to switch between light and dark theme.
+
+- I used a css preprocessor called scss for styling. Scss gives you control over your styles with additional functionalities like function, mixins, and also partials which enable you to organize your styles into modules and keep things more organize.
+
+- I used BEM for all my classes to keep them organize
+
+- For layout, I used flexbox to align the heading and the toggle element at both end of the page width and keep them in the center of the page.
+
+**Thoughts**
+
+- Building things from stretch by looking at the design files is how things are done in the real world. Thus, working on this project and building it out like the design is a good learning experience. I am glad to be doing this.
+
+- I am okay with how the header component looks and the styles. I couldn't figure out the hover effect color on the toggle because am not a a pro plan to get the actual figma file. I am building this from a jpeg file and eyeballing every single things. But that is okay, it has help me to spot details by looking.
+
+## Day 15 [June 20, 2023]
+
+**Today's Progress**
+
+- Continue to work my way up building the project like how it look in the design file. I build the card component for the social media dashboard.
+
+- Created the markup for the card with a section element to parent all the cards component. The section component will be a grid parent for the cards component.
+
+- Using grid, I layout the cards in a four column grid on large devices and a two column grid on medium devices and stack up on small devices to make them responsive.
+
+- Using flexbox, I center the elements within the card and also give them proper alignment.
+
+**Thoughts**
+
+- Working with css grid makes things simple for me and I found it to better at laying out elements on the page and flexbox for aligning elements on the page.
+
+- I used grid in this project for alignment with few lines of code I was able to make the card element in a gird layout. I found it simple and a great way to layout elements.
+
+## Day 16 [June 21, 2023]
+
+**Today's Progress**
+
+- Overview card component makeup and styles
+
+- Use grid for the layout
+
+- flexbox for alignment of elements within the card
+
+**Thoughts**
+
+- Using BEM classes helps a lot with styles organization and also when debugging styles.
+
+- Mixins in sass are great way not to write duplicate styles. I created a flex mixins and used it on every element that need to be flex and gird. It helped me not repeat styles rules for elements that need it. I write a style rule one place and just include where I want it.
+
+## Day 17 [June 22, 2023]
+
+**Today's Progress**
+
+- Set the various color for dark / light mode using css custom properties.
+
+- With light mode as default, all color variables assign on the root element will have two values with the default being light mode colors.
+
+- Using prefer-color-scheme Dark, the values of the default colors will change to the assigned dark mode colors.
+
+**Thoughts**
+
+- Before this project I had no idea what prefer-color-scheme is but I guess we learn everyday when we put in the effort. Using prefer-color-scheme Dark media query, the different colors will be change to suit the dark mode of the user system.
+
+- I created a variable for each element on the page that needs a color change in the different modes and each of these variables will contain two values base on the color-scheme, with light mode been the default.
+
+## Day 18 [June 23, 2023]
+
+**Today's Progress**
+
+- Add functionality for the toggle button
+
+- when user toggle the button either on or off the light or dark mode will activated.
+
+- Detect user prefer-color-scheme in real time and toggle the button to their preferred choice.
+
+- Store user theme choice in the browser localstorage to persist user choice after page reload.
+
+**Thoughts**
+
+- Implementing the various functionalities was a great learning experience.
+
+- Learning how to listen for the various events, for example the change event for this project. which will listen when user decides to change their prefer color theme from within their system, this event will detect it and updates the toggle in realtime to take effect using a class which will be assign to the body element.
+
+## Day 19 [June 24, 2023]
