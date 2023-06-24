@@ -1,0 +1,16 @@
+@use "../utils/" as u;
+
+.header {
+  @include u.breakpoints-up(medium) {
+    @include u.flex(row, space-between);
+  }
+}
+
+.toggle {
+  @include u.flex(row, space-between);
+  margin: 0;
+  padding-inline: 0;
+  @include u.breakpoints-up(medium) {
+    gap: u.rem(12);
+  }
+}

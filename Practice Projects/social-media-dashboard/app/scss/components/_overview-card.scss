@@ -1,0 +1,30 @@
+@use "../utils/" as u;
+
+.overview-card {
+  display: flex;
+  flex-direction: column;
+  padding: u.rem(5) u.rem(16) 0;
+
+  &__social-review {
+    @include u.flex(row, space-between);
+
+    margin-bottom: u.rem(12);
+  }
+
+  &__social-records {
+    @include u.flex(row, space-between);
+    margin-bottom: u.rem(12);
+  }
+  p {
+    font-size: u.rem(12);
+  }
+  h4 {
+    font-size: u.rem(27.2); //24
+    margin: 0;
+  }
+}
+
+.overview-text {
+  width: min(100% - u.rem(25), u.rem(1110));
+  margin-inline: auto;
+}

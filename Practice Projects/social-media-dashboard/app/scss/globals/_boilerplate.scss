@@ -1,0 +1,58 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-inter);
+  font-weight: 400;
+  background: var(--background);
+  color: var(--text-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+body.light {
+  --background: var(--white-bg);
+  --text-color: var(--white-dark-text);
+  --small-text: var(--white-grayish-text);
+  --card-bg: var(--white-card-bg);
+  --card-text-color: var(--white-dark-text);
+  --toggle: var(--light-toggle);
+  --toggle-bg: var(--light-toggle-bg);
+  --toggle-btn: var(--light-toggle-btn);
+  --card-hover-color: var(--light-toggle-bg);
+}
+
+body.dark {
+  --background: var(--dark-bg);
+  --text-color: var(--dark-white-text);
+  --card-bg: var(--dark-card-bg);
+  --small-text: var(--dark-blue-text);
+  --card-text-color: var(--dark-white-text);
+  --toggle: var(--dark-blue-text);
+  --toggle-btn: var(--dark-bg);
+  --card-hover: var(--dark-blue-text);
+
+  --toggle-bg: linear-gradient(
+    225deg,
+    var(--toggle-bg-end) 0%,
+    var(--toggle-bg-start) 98.02%
+  );
+  --toggle-btn: var(-dark-bg);
+}

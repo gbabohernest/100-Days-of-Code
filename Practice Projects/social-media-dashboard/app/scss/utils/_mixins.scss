@@ -1,0 +1,12 @@
+@use "functions" as f;
+
+@mixin flex($flex-direction, $space-between) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $space-between;
+  align-items: center;
+}
+
+@mixin grid($grid-column, $grid-size) {
+  grid-template-columns: repeat($grid-column, $grid-size + fr);
+}
