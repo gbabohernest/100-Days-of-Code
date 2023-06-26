@@ -181,3 +181,12 @@ _Complete the solution so that it strips all text that follows any of a set of c
   apples, pears # and bananas
   grapes
   bananas !apples
+
+## Leetcode Challenges
+
+**19- Roman to Integer**
+
+_Given a roman numeral, convert it to an integer_
+
+- Roman numerals are represented by seven different symbols:
+- I, V, X, L, C, D and M.
