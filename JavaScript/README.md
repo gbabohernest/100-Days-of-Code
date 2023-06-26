@@ -190,3 +190,7 @@ _Given a roman numeral, convert it to an integer_
 
 - Roman numerals are represented by seven different symbols:
 - I, V, X, L, C, D and M.
+
+**20- Palindrome Linked List**
+
+_Given the head of a singly linked list, return true if it is a palindrome or false otherwise_

@@ -273,3 +273,41 @@
 - Learning how to listen for the various events, for example the change event for this project. which will listen when user decides to change their prefer color theme from within their system, this event will detect it and updates the toggle in realtime to take effect using a class which will be assign to the body element.
 
 ## Day 19 [June 24, 2023]
+
+**Today's Progress**
+
+- I read on some of the array methods in Javascript
+- map, filter, reduce, slice, forEach etc.
+
+**Thoughts**
+
+- These array methods and many other array methods are used to make modification to the elements of the array. They provide a powerful and convenient ways to manipulate and process arrays in Javascript.
+
+## Day 20 [June 25, 2023]
+
+**Today's Progress**
+
+- update the readme.md file of my social-media-dashboard theme switcher project
+- added a link to the live site as well to project url on frontend mentor
+
+**Thoughts**
+
+- A good readme.md file helps others to understand what your project is about.
+
+- It is a skills am trying to improve on with every passing day.
+
+## Day 21 [June 26, 2023]
+
+**Today's Progress**
+
+- Did some Javascript coding challenges from Leetcode
+
+- Write a function that take in a roman numeral string and return the integer version
+
+- Write a function that return true if the head of a singly linked is a palindrome or false otherwise.
+
+**Thoughts**
+
+- improving my problem skills is a great way to get started on the journey of becoming a skilled programmer.
+
+- solving these coding challenges has help with that, it has help me think about the problems and come up with an algorithm before writing a single line of code.
