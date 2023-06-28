@@ -23,7 +23,7 @@ const createTable = () => {
 
   const table = createTableElement(parseInt(row), parseInt(col));
   table.classList.add("table");
-  table.classList.add("table table-bordered");
+  table.classList.add("table-bordered");
   tableWrapper.appendChild(table);
 };
 
