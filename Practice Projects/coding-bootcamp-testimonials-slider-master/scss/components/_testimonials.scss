@@ -1,0 +1,37 @@
+//mobile first
+@use "../utils/" as u;
+.testimonials {
+  width: u.rem(375);
+  margin-inline: auto;
+  padding-top: u.rem(20);
+
+  &__banner {
+    background: url(../../images/pattern-bg.svg) no-repeat;
+    background-size: contain;
+    height: u.rem(308);
+    position: relative;
+
+    &__author-img {
+      width: u.rem(254);
+      height: u.rem(250);
+      position: absolute;
+      top: u.rem(32);
+      left: u.rem(28);
+      border-radius: u.rem(5);
+    }
+
+    &__toggler {
+      position: absolute;
+      top: u.rem(260);
+      left: u.rem(116);
+      width: u.rem(76);
+      padding: u.rem(10);
+      display: flex;
+      justify-content: space-between;
+      border-radius: u.rem(80);
+      background: white;
+      box-shadow: 0 u.rem(10) u.rem(20) rgba(0, 0, 0, 0.19),
+        0 u.rem(6) u.rem(6) rgba(0, 0, 0, 0.15);
+    }
+  }
+}
