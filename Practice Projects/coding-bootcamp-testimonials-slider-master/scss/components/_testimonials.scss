@@ -34,4 +34,41 @@
         0 u.rem(6) u.rem(6) rgba(0, 0, 0, 0.15);
     }
   }
+
+  &__textual-contents {
+    text-align: center;
+    //padding-top: u.rem(63);
+    margin-top: u.rem(63);
+
+    &__text {
+      position: relative;
+      padding-inline: u.rem(22);
+
+      &::before {
+        content: "";
+        display: block;
+        width: u.rem(120);
+        height: u.rem(100);
+        background: url(../../images/pattern-quotes.svg) no-repeat;
+        //background-position: center;
+        background-position: 72% 52%;
+        background-size: u.rem(65);
+        position: absolute;
+        top: u.rem(-60);
+        left: u.rem(120);
+      }
+    }
+
+    &__author {
+      margin-top: u.rem(20);
+      &__name {
+        font-weight: bold;
+        font-size: u.rem(18);
+      }
+      &__profession {
+        font-weight: 500;
+        color: u.$Grayish_Blue;
+      }
+    }
+  }
 }
