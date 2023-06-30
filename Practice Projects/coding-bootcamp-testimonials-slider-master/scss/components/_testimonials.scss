@@ -62,12 +62,13 @@
         padding-inline: u.rem(19);
         margin-top: u.rem(30);
         background-image: url(../../images/pattern-quotes.svg);
-        background-size: u.rem(80);
+
+        background-size: u.rem(51.2);
         background-position: top center;
         background-repeat: no-repeat;
 
         @include u.breakpoints-up(medium) {
-          background-position: 10% top;
+          background-position: 22% top;
           background-size: u.rem(100);
           align-items: flex-start;
           padding-right: 0;
