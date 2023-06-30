@@ -1,0 +1,29 @@
+@use "../utils/" as u;
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: u.$family;
+  font-size: u.rem(32);
+  color: u.$Dark_Blue;
+  background: url(../../images/pattern-curve.svg) no-repeat;
+  background-position: 0% 100%;
+  overflow: hidden;
+}
+
+a:hover,
+a:visited,
+a {
+  color: u.$Dark_Blue;
+  text-decoration: none;
+}

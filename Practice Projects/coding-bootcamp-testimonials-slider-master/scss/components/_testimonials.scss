@@ -1,73 +1,134 @@
-//mobile first
 @use "../utils/" as u;
+
 .testimonials {
-  width: u.rem(375);
-  margin-inline: auto;
-  padding-top: u.rem(20);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: u.rem(30);
 
-  &__banner {
-    background: url(../../images/pattern-bg.svg) no-repeat;
-    background-size: contain;
-    height: u.rem(308);
+  &__wrapper {
+    width: min(100%, u.rem(1000));
+    height: 100%;
     position: relative;
+    margin-inline: auto;
 
-    &__author-img {
-      width: u.rem(254);
-      height: u.rem(250);
-      position: absolute;
-      top: u.rem(32);
-      left: u.rem(28);
-      border-radius: u.rem(5);
+    &__card {
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      @include u.breakpoints-up(medium) {
+        flex-direction: row;
+        text-align: left;
+      }
+      &__img-container {
+        width: 100%;
+        margin-inline: auto;
+        padding: u.rem(40);
+        background-image: url(../../images/pattern-bg.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @include u.breakpoints-up(medium) {
+          margin-left: u.rem(-100);
+          z-index: -1;
+          padding-top: u.rem(62);
+          padding-right: u.rem(68);
+        }
+
+        img {
+          height: 100%;
+          // width: 300px;
+          width: u.rem(244);
+          border-radius: u.rem(5);
+
+          @include u.breakpoints-up(medium) {
+            //width: 395px;
+            width: u.rem(400);
+          }
+        }
+      }
+
+      &__textual-contents {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-inline: u.rem(19);
+        margin-top: u.rem(30);
+        background-image: url(../../images/pattern-quotes.svg);
+        background-size: u.rem(80);
+        background-position: top center;
+        background-repeat: no-repeat;
+
+        @include u.breakpoints-up(medium) {
+          background-position: 10% top;
+          background-size: u.rem(100);
+          align-items: flex-start;
+          padding-right: 0;
+        }
+
+        .text {
+          font-weight: u.rem(300);
+          font-size: u.rem(16);
+          line-height: 1.5;
+
+          @include u.breakpoints-up(medium) {
+            font-size: u.rem(28);
+            padding-inline: u.rem(4);
+          }
+        }
+
+        .author {
+          margin-top: u.rem(15);
+          font-size: u.rem(16);
+          font-weight: 700;
+
+          @include u.breakpoints-up(medium) {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: u.rem(10);
+          }
+          p {
+            margin: 0;
+            padding-bottom: u.rem(3);
+          }
+          span {
+            color: u.$Grayish_Blue;
+            font-weight: 500;
+          }
+        }
+      }
     }
-
     &__toggler {
       position: absolute;
-      top: u.rem(260);
-      left: u.rem(116);
-      width: u.rem(76);
-      padding: u.rem(10);
+      left: 50%;
+      transform: translateX(-50%);
+      top: u.rem(272);
+      width: u.rem(69);
+      height: u.rem(34);
+      background-color: white;
+      border-radius: u.rem(50);
       display: flex;
       justify-content: space-between;
-      border-radius: u.rem(80);
-      background: white;
-      box-shadow: 0 u.rem(10) u.rem(20) rgba(0, 0, 0, 0.19),
-        0 u.rem(6) u.rem(6) rgba(0, 0, 0, 0.15);
-    }
-  }
+      padding: u.rem(10);
+      box-shadow: -20px 12px 20px 0px hsla(240, 18%, 77%, 0.52);
 
-  &__textual-contents {
-    text-align: center;
-    //padding-top: u.rem(63);
-    margin-top: u.rem(63);
-
-    &__text {
-      position: relative;
-      padding-inline: u.rem(22);
-
-      &::before {
-        content: "";
-        display: block;
-        width: u.rem(120);
-        height: u.rem(100);
-        background: url(../../images/pattern-quotes.svg) no-repeat;
-        //background-position: center;
-        background-position: 72% 52%;
-        background-size: u.rem(65);
-        position: absolute;
-        top: u.rem(-60);
-        left: u.rem(120);
+      @include u.breakpoints-up(medium) {
+        width: u.rem(74);
+        top: u.rem(444);
+        transform: translate(0);
+        left: calc(100% - u.rem(412));
       }
-    }
 
-    &__author {
-      margin-top: u.rem(20);
-      &__name {
-        font-weight: bold;
-        font-size: u.rem(18);
-      }
-      &__profession {
-        font-weight: 500;
-        color: u.$Grayish_Blue;
+      img {
+        cursor: pointer;
       }
     }
   }
