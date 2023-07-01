@@ -311,3 +311,23 @@
 - improving my problem skills is a great way to get started on the journey of becoming a skilled programmer.
 
 - solving these coding challenges has help with that, it has help me think about the problems and come up with an algorithm before writing a single line of code.
+
+## Day 22 - 30 [June 30, 2023]
+
+- Start working on a testimonials-slider project from Frontend Mentor
+
+- create the markup for the entire project
+
+- use scss for styling
+
+- Javascript for slider functionality
+
+**Thoughts**
+
+- Building projects from frontend mentor is a great way to put into practice what you have learn.
+
+- This project took me while to finished due to my battle with a fever when I started to build the testimonials-slider.
+
+- I implemented the slider functionality with Javascript and dynamically adding the contents to the various element when the dom loads.
+
+- This project was another great way to practice my javascript skills and it was a great learning experience. I am looking forward to building more projects with javascript.
