@@ -1,0 +1,59 @@
+:root {
+  //theme 1
+  --theme1-bg-very-dark-blue-main-bg: hsl(222, 26%, 31%);
+  --theme1-bg-very-dark-blue-toggle-keypad-bg: hsl(223, 31%, 20%);
+  --theme1-bg-very-dark-blue-screen-bg: hsl(224, 36%, 15%);
+
+  //keys
+  --theme1-keys-dark-blue-key-bg: hsl(225, 21%, 49%);
+  --theme1-keys-dark-blue-key-shadow: hsl(224, 28%, 35%);
+  --theme1-keys-red-key-bg-toggle: hsl(6, 63%, 50%);
+  --theme1-keys-dark-red-key-shadow: hsl(6, 70%, 34%);
+  --theme1-keys-light-grayish-orange-key-bg: hsl(30, 25%, 89%);
+  --theme1-keys-grayish-orange-key-shadow: hsl(28, 16%, 65%);
+
+  //text
+  --theme1-text-very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --theme-1-text-white: hsl(0, 0%, 100%);
+
+  //theme2
+  --theme2-bg-light-gray-main-bg: hsl(0, 0%, 90%);
+  --theme2-bg-grayish-red-toggle-bg-keypad: hsl(0, 5%, 81%);
+  --theme2-bg-very-light-gray-screen-bg: hsl(0, 0%, 93%);
+
+  //keys
+  --theme2-keys-dark-moderate-cyan-key-bg: hsl(185, 42%, 37%);
+  --theme2-keys-very-dark-cyan-key-shadow: hsl(185, 58%, 25%);
+  --theme2-keys-orange-key-bg-toggle: hsl(25, 98%, 40%);
+  --theme2-keys-dark-orange-key-shadow: hsl(25, 99%, 27%);
+  --theme2-keys-light-grayish-yellow-key-bg: hsl(45, 7%, 89%);
+  --them2-keys-dark-grayish-orange-key-shadow: hsl(35, 11%, 61%);
+
+  //text
+  --theme2-text-very-dark-grayish: hsl(60, 10%, 19%);
+  --theme2-text-white: hsl(0, 0%, 100%);
+
+  //theme 3
+  --theme3-bg-very-dark-violet-main-bg: hsl(268, 75%, 9%);
+  --theme3-bg-very-dark-violet-toggle-bg-keypad-bg-screen-bg: hsl(
+    268,
+    71%,
+    12%
+  );
+
+  //keys
+  --theme3-keys-dark-violet-key-bg: hsl(281, 89%, 26%);
+  --theme3-keys-vivid-magenta-key-shadow: hsl(285, 91%, 52%);
+  --theme3-keys-pure-cyan-key-bg-toggle: hsl(176, 100%, 44%);
+  --theme3-keys-soft-cyan-key-shadow: hsl(177, 92%, 70%);
+  --theme3-keys-very-dark-violet-key-bg: hsl(268, 47%, 21%);
+  --theme3-keys-dark-magenta-key-shadow: hsl(290, 70%, 36%);
+
+  //text
+  --theme3-text-light-yellow: hsl(52, 100%, 62%);
+  --theme3-text-very-dark-blue: hsl(198, 20%, 13%);
+  --theme3-text-white-text: hsl(0, 0%, 100%);
+
+  //typography
+  --font-family: "League Spartan", sans-serif;
+}
