@@ -36,42 +36,53 @@
     </style>
   </head>
   <body>
-    <main class="calculator">
-      <div class="calculator__header">
-        <p>calc</p>
-        <div class="calculator__header__toggler">
-          <span>theme</span>
-          <div class="calculator__header__toggler__radio">
+    <main>
+      <section class="calculator">
+        <div class="calculator__header">
+          <div class="calculator__header__label">
             <label for="1">1</label>
             <label for="2">2</label>
             <label for="3">3</label>
-            <input type="radio" name="theme" id="1" />
-            <input type="radio" name="theme" id="2" />
-            <input type="radio" name="theme" id="3" />
+          </div>
+          <div class="calculator__header__wrapper">
+            <p>calc</p>
+            <div class="calculator__header__wrapper__radio-flex">
+              <span>theme</span>
+              <div class="calculator__header__wrapper__radio-wrapper">
+                <input type="radio" name="theme" id="1" />
+                <input type="radio" name="theme" id="2" />
+                <input type="radio" name="theme" id="3" />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="calculator__grid">
-        <div class="calculator__grid__output"></div>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button class="blue">DEL</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>&#247;</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>-</button>
-        <button>.</button>
-        <button>0</button>
-        <button>/</button>
-        <button>x</button>
-        <button class="span-two blue">RESET</button>
-        <button class="span-two red">=</button>
-      </div>
+        <div class="calculator__output-grid">
+          <div class="calculator__output-grid__output-wrapper">
+            <div class="prev-value">1</div>
+            <div class="current-value">1</div>
+          </div>
+        </div>
+        <div class="calculator__operations-grid">
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button class="blue">DEL</button>
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button>&#247;</button>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>-</button>
+          <button>.</button>
+          <button>0</button>
+          <button>/</button>
+          <button>x</button>
+          <button class="span-two blue">RESET</button>
+          <button class="span-two red">=</button>
+        </div>
+      </section>
     </main>
 
     <div class="attribution">
