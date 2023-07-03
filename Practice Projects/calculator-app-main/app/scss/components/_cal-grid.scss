@@ -1,0 +1,120 @@
+/* .calculator {
+  &__grid {
+ 
+
+    &__output {
+      //grid-column: 1 / -1;
+      background-color: cyan; //temp
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      flex-direction: column;
+      padding: 10px;
+      word-wrap: break-word;
+      word-break: break-all;
+      border-radius: 5px;
+      margin-bottom: 20px;
+
+      &__prev-value {
+        color: red; //temp
+        font-size: 1.5rem;
+      }
+
+      &__current-value {
+        color: purple; //temp
+        font-size: 2.5rem;
+      }
+    }
+
+    &__operation {
+      // display: grid;
+      // grid-template-columns: repeat(4, 80px);
+      // grid-template-rows: repeat(5, 75px);
+      // //border: 1px solid black;
+      // background: skyblue; //temp
+      // border-radius: 5px;
+      // padding: 12px;
+
+      //mobile
+      display: grid;
+      //grid-template-columns: repeat(4, 62px);
+      grid-template-columns: repeat(4, 50ppx);
+      grid-template-rows: repeat(5, 50px);
+      background: skyblue;
+      border-radius: 5px;
+      padding: 12px;
+
+      button.span-two {
+        grid-column: span 2;
+      }
+
+      button {
+        //width: 50px;
+        //height: 50px;
+        margin: 3px;
+      }
+    }
+  }
+}
+ */
+
+.calculator {
+  &__output-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto);
+
+    &__output-wrapper {
+      grid-column: 1 / -1;
+      background-color: rgba(0, 0, 0, 0.75); //temp
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      flex-direction: column;
+      padding: 10px; //temp maybe
+      word-wrap: break-word;
+      word-break: break-all;
+      border-radius: 5px;
+
+      margin-bottom: 30px; //maybe change
+
+      .prev-value {
+        color: rgba(255, 255, 255, 0.75); //temp change
+        font-size: 1.5rem; //temp change
+      }
+
+      .current-value {
+        color: white; // temp change
+        font-size: 2.5rem; //temp change
+      }
+    }
+  }
+
+  &__operations-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(5, 80px);
+    background-color: skyblue; //temp
+    border-radius: 5px;
+    //padding: 20px;
+
+    .span-two {
+      grid-column: span 2;
+    }
+    button {
+      cursor: pointer;
+      font-size: 1.2rem; //temp
+      border: 1px solid white; //temp
+      border-radius: 10px;
+      outline: none;
+      //background-color: rgba(255, 255, 255, 0.7); //temp
+      margin: 10px;
+
+      &:hover {
+        background-color: rgba (255, 255, 255, 0.9); //temp
+      }
+    }
+  }
+}
