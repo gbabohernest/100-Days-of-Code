@@ -1,10 +1,16 @@
-/* .calculator {
-  &__grid {
- 
+.calculator {
+  &__output-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(130px, auto);
 
-    &__output {
-      //grid-column: 1 / -1;
-      background-color: cyan; //temp
+    &__output-wrapper {
+      grid-column: 1 / -1;
+      background-color: var(
+        --theme1-bg-very-dark-blue-screen-bg
+      ); //temp - bg will change base on different themes
       display: flex;
       align-items: flex-end;
       justify-content: space-around;
@@ -13,81 +19,15 @@
       word-wrap: break-word;
       word-break: break-all;
       border-radius: 5px;
-      margin-bottom: 20px;
 
-      &__prev-value {
-        color: red; //temp
-        font-size: 1.5rem;
-      }
-
-      &__current-value {
-        color: purple; //temp
-        font-size: 2.5rem;
-      }
-    }
-
-    &__operation {
-      // display: grid;
-      // grid-template-columns: repeat(4, 80px);
-      // grid-template-rows: repeat(5, 75px);
-      // //border: 1px solid black;
-      // background: skyblue; //temp
-      // border-radius: 5px;
-      // padding: 12px;
-
-      //mobile
-      display: grid;
-      //grid-template-columns: repeat(4, 62px);
-      grid-template-columns: repeat(4, 50ppx);
-      grid-template-rows: repeat(5, 50px);
-      background: skyblue;
-      border-radius: 5px;
-      padding: 12px;
-
-      button.span-two {
-        grid-column: span 2;
-      }
-
-      button {
-        //width: 50px;
-        //height: 50px;
-        margin: 3px;
-      }
-    }
-  }
-}
- */
-
-.calculator {
-  &__output-grid {
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(100px, auto);
-
-    &__output-wrapper {
-      grid-column: 1 / -1;
-      background-color: rgba(0, 0, 0, 0.75); //temp
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-around;
-      flex-direction: column;
-      padding: 10px; //temp maybe
-      word-wrap: break-word;
-      word-break: break-all;
-      border-radius: 5px;
-
-      margin-bottom: 30px; //maybe change
+      margin-bottom: 30px;
 
       .prev-value {
-        color: rgba(255, 255, 255, 0.75); //temp change
-        font-size: 1.5rem; //temp change
+        color: var(--theme-1-text-white); //temp change
       }
 
       .current-value {
-        color: white; // temp change
-        font-size: 2.5rem; //temp change
+        color: var(--theme-1-text-white); // temp change
       }
     }
   }
@@ -95,21 +35,35 @@
   &__operations-grid {
     display: grid;
     grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(5, 80px);
-    background-color: skyblue; //temp
+    grid-template-rows: repeat(5, 70px); //80
+    background-color: var(--theme1-bg-very-dark-blue-toggle-keypad-bg); //theme1
     border-radius: 5px;
-    //padding: 20px;
 
     .span-two {
       grid-column: span 2;
     }
+
+    .blue {
+      background-color: var(--theme1-keys-dark-blue-key-bg);
+      color: var(--theme-1-text-white); //theme1 text-color
+    }
+
+    .red {
+      background-color: var(--theme1-keys-red-key-bg-toggle);
+      color: var(--theme-1-text-white); //theme1 text-color
+    }
     button {
       cursor: pointer;
-      font-size: 1.2rem; //temp
-      border: 1px solid white; //temp
-      border-radius: 10px;
+      font-size: 25px;
+      font-weight: 700;
+      border: none;
+      border-radius: 15px;
       outline: none;
-      //background-color: rgba(255, 255, 255, 0.7); //temp
+      background-color: var(
+        --theme1-keys-light-grayish-orange-key-bg
+      ); //temp theme1 ch later
+      color: var(--theme1-text-very-dark-grayish-blue);
+
       margin: 10px;
 
       &:hover {
