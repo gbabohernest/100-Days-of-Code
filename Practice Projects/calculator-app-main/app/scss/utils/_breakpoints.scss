@@ -1,0 +1,35 @@
+@use "functions" as f;
+
+//750px, 1000px
+$breakpoint-up: (
+  "medium": f.em(750),
+  "large": f.em(1000),
+);
+
+//749.98px, 599.98px;
+$breakpoint-down: (
+  "small-large": f.em(749.98),
+  "small-small": f.em(599.98),
+);
+
+@mixin breakpointsUp($size) {
+  @media screen and (min-width: map-get($breakpoint-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpointsDown($size) {
+  @media screen and (max-width: map-get($breakpoint-down, $size)) {
+    @content;
+  }
+}
+
+@mixin grid($columns, $size) {
+  grid-template-columns: repeat($columns, $size);
+  grid-template-rows: minmax(130px, auto);
+}
+
+@mixin grid-cal($columns, $size, $rows, $row-size) {
+  grid-template-columns: repeat($columns, $size);
+  grid-template-rows: repeat($rows, $row-size);
+}

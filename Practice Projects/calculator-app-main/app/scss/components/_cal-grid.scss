@@ -1,10 +1,16 @@
+@use "../utils/" as u;
+
 .calculator {
   &__output-grid {
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(130px, auto);
+    grid-template-columns: repeat(4, 84px);
+    grid-template-rows: minmax(120px, auto);
+
+    @include u.breakpointsUp(medium) {
+      @include u.grid(4, 110px);
+    }
 
     &__output-wrapper {
       grid-column: 1 / -1;
@@ -16,6 +22,7 @@
       justify-content: space-around;
       flex-direction: column;
       padding: 10px;
+      padding-inline: 26px;
       word-wrap: break-word;
       word-break: break-all;
       border-radius: 5px;
@@ -34,11 +41,18 @@
 
   &__operations-grid {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(5, 70px); //80
+    grid-template-columns: repeat(4, 74px);
+    grid-template-rows: repeat(5, 80px);
+    align-content: center;
+    justify-content: center;
+
     background-color: var(--theme1-bg-very-dark-blue-toggle-keypad-bg); //theme1
     border-radius: 5px;
+    padding: 15px;
 
+    @include u.breakpointsUp(medium) {
+      @include u.grid-cal(4, 100px, 5, 70px);
+    }
     .span-two {
       grid-column: span 2;
     }
@@ -46,6 +60,7 @@
     .blue {
       background-color: var(--theme1-keys-dark-blue-key-bg);
       color: var(--theme-1-text-white); //theme1 text-color
+      font-size: 19px;
     }
 
     .red {
@@ -54,7 +69,7 @@
     }
     button {
       cursor: pointer;
-      font-size: 25px;
+      font-size: 32px;
       font-weight: 700;
       border: none;
       border-radius: 15px;
@@ -64,7 +79,10 @@
       ); //temp theme1 ch later
       color: var(--theme1-text-very-dark-grayish-blue);
 
-      margin: 10px;
+      margin: 5px;
+      @include u.breakpointsUp(medium) {
+        margin: 10px;
+      }
 
       &:hover {
         background-color: rgba (255, 255, 255, 0.9); //temp

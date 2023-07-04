@@ -1,0 +1,27 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--theme1-bg-very-dark-blue-main-bg); //theme1 bg..ch
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 32px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: min(100% - 20px, 500px);
+  margin-inline: auto;
+}
