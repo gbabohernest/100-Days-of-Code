@@ -1,0 +1,82 @@
+.calculator {
+  padding: 20px;
+  &__header {
+    margin-bottom: 30px;
+    font-size: 10px;
+    color: var(--theme-1-text-white);
+
+    &__label {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      label {
+        margin-inline: 6px;
+        cursor: pointer;
+      }
+    }
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      &__radio-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+
+        span {
+          text-transform: uppercase;
+        }
+      }
+
+      p {
+        margin: 0;
+        font-size: 1.4rem;
+      }
+
+      &__radio-wrapper {
+        position: relative;
+        height: 15px;
+        width: 51px;
+
+        input[type="radio"] {
+          margin: 0;
+          width: 15px;
+          height: 15px;
+          cursor: pointer;
+        }
+
+        .radio-btn-bg {
+          display: block;
+          height: 100%;
+          position: absolute;
+          width: 100%;
+          top: 0;
+          background-color: var(--theme1-bg-very-dark-blue-toggle-keypad-bg);
+          border-radius: 12px;
+          pointer-events: none;
+        }
+
+        .radio-btn {
+          position: absolute;
+          left: 1px;
+          top: 1px;
+          right: 100%;
+          width: 13px;
+          height: 13px;
+          border-radius: 50%;
+          background-color: var(--theme1-keys-red-key-bg-toggle);
+          transition: all 300ms ease-in-out;
+        }
+
+        #theme-1:checked,
+        #theme-2:checked,
+        #theme-3:checked ~ .radio-btn {
+          left: calc(100% - 14px);
+          right: 1px;
+        }
+      }
+    }
+  }
+}
