@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -24,7 +23,6 @@
     <link rel="stylesheet" href="app/scss/dist/css/main.min.css" />
     <title>Frontend Mentor | Calculator app</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
         font-size: 11px;
@@ -40,26 +38,28 @@
       <section class="calculator">
         <div class="calculator__header">
           <div class="calculator__header__label">
-            <label for="1">1</label>
-            <label for="2">2</label>
-            <label for="3">3</label>
+            <label for="theme-1">1</label>
+            <label for="theme-2">2</label>
+            <label for="theme-3">3</label>
           </div>
           <div class="calculator__header__wrapper">
             <p>calc</p>
             <div class="calculator__header__wrapper__radio-flex">
               <span>theme</span>
               <div class="calculator__header__wrapper__radio-wrapper">
-                <input type="radio" name="theme" id="1" />
-                <input type="radio" name="theme" id="2" />
-                <input type="radio" name="theme" id="3" />
+                <input type="radio" name="theme" id="theme-1" />
+                <input type="radio" name="theme" id="theme-2" />
+                <input type="radio" name="theme" id="theme-3" />
+                <span aria-hidden="true" class="radio-btn-bg"></span>
+                <span aria-hidden="true" class="radio-btn"></span>
               </div>
             </div>
           </div>
         </div>
         <div class="calculator__output-grid">
           <div class="calculator__output-grid__output-wrapper">
-            <div class="prev-value">1</div>
-            <div class="current-value">1</div>
+            <div class="prev-value">233</div>
+            <div class="current-value">23</div>
           </div>
         </div>
         <div class="calculator__operations-grid">
@@ -89,7 +89,7 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Ernest Push Gbaboh</a>.
     </div>
   </body>
 </html>
