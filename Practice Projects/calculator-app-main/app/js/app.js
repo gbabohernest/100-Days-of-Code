@@ -16,8 +16,12 @@ class Calculator {
   }
 
   appendNumber(number) {
+    if (this.hasBeenInvoked) {
+      this.currentValue = "";
+    }
     if (number === "." && this.currentValue.includes(".")) return;
     this.currentValue = this.currentValue.toString() + number.toString();
+    this.hasBeenInvoked = false;
   }
 
   selectOperation(operation) {
@@ -56,6 +60,7 @@ class Calculator {
     this.currentValue = computation;
     this.operation = undefined;
     this.previousValue = "";
+    this.hasBeenInvoked = true;
   }
 
   formatDisplay(number) {
@@ -77,7 +82,7 @@ class Calculator {
   }
 
   updateDisplay() {
-    this.currentOperand.innerText = this.currentValue;
+    this.currentOperand.innerText = this.formatDisplay(this.currentValue);
     if (this.operation != null) {
       this.previousOperand.innerText = `${this.formatDisplay(
         this.previousValue
