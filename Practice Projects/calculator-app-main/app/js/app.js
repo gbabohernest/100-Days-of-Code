@@ -5,7 +5,9 @@ class Calculator {
     this.reset();
   }
 
-  delete() {}
+  delete() {
+    this.currentValue = this.currentValue.toString().slice(0, -1);
+  }
 
   reset() {
     this.currentValue = "";
@@ -56,9 +58,33 @@ class Calculator {
     this.previousValue = "";
   }
 
+  formatDisplay(number) {
+    const num = number.toString();
+    const intDigits = parseFloat(num.split(".")[0]);
+    const decimalDigits = num.split(".")[1];
+    let intDisplay;
+
+    if (isNaN(intDigits)) {
+      intDisplay = "";
+    } else {
+      intDisplay = intDigits.toLocaleString("en", { maximumFractionDigits: 0 });
+    }
+    if (decimalDigits != null) {
+      return `${intDisplay}.${decimalDigits}`;
+    } else {
+      return intDisplay;
+    }
+  }
+
   updateDisplay() {
     this.currentOperand.innerText = this.currentValue;
-    this.previousOperand.innerText = this.previousValue;
+    if (this.operation != null) {
+      this.previousOperand.innerText = `${this.formatDisplay(
+        this.previousValue
+      )} ${this.operation}`;
+    } else {
+      this.previousOperand.innerText = "";
+    }
   }
 }
 
@@ -93,5 +119,10 @@ equalButton.addEventListener("click", () => {
 
 resetButton.addEventListener("click", () => {
   calculator.reset();
+  calculator.updateDisplay();
+});
+
+deleteButton.addEventListener("click", () => {
+  calculator.delete();
   calculator.updateDisplay();
 });
