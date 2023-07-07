@@ -46,6 +46,7 @@
     justify-content: center;
     border-radius: u.rem(5);
     padding: u.rem(15);
+    text-align: center;
 
     @include u.breakpointsUp(medium) {
       @include u.grid-cal(4, u.rem(100), 5, u.rem(70));
@@ -70,6 +71,7 @@
       border-radius: u.rem(15);
       outline: none;
       margin: u.rem(5);
+      text-align: center;
       @include u.breakpointsUp(medium) {
         margin: u.rem(10);
       }
