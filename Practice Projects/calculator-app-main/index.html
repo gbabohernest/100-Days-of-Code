@@ -21,23 +21,16 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="app/scss/dist/css/main.min.css" />
+    <!-- js -->
+    <script src="./app/js/app.js" defer></script>
+    <script src="./app/js/theme.js" defer></script>
     <title>Frontend Mentor | Calculator app</title>
-
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <main>
-      <section class="calculator">
+      <section class="calculator theme-1" id="cal-head">
         <div class="calculator__header">
-          <div class="calculator__header__label">
+          <div class="calculator__header__label" id="label">
             <label for="theme-1">1</label>
             <label for="theme-2">2</label>
             <label for="theme-3">3</label>
@@ -47,9 +40,15 @@
             <div class="calculator__header__wrapper__radio-flex">
               <span>theme</span>
               <div class="calculator__header__wrapper__radio-wrapper">
-                <input type="radio" name="theme" id="theme-1" />
-                <input type="radio" name="theme" id="theme-2" />
-                <input type="radio" name="theme" id="theme-3" />
+                <input
+                  type="radio"
+                  name="theme"
+                  id="theme-1"
+                  class="1"
+                  checked
+                />
+                <input type="radio" name="theme" id="theme-2" class="2" />
+                <input type="radio" name="theme" id="theme-3" class="3" />
                 <span aria-hidden="true" class="radio-btn-bg"></span>
                 <span aria-hidden="true" class="radio-btn"></span>
               </div>
@@ -57,30 +56,30 @@
           </div>
         </div>
         <div class="calculator__output-grid">
-          <div class="calculator__output-grid__output-wrapper">
-            <div class="prev-value">233</div>
-            <div class="current-value">23</div>
+          <div class="calculator__output-grid__output-wrapper bg-theme">
+            <div data-prev-value class="prev-value"></div>
+            <div data-current-value class="current-value"></div>
           </div>
         </div>
-        <div class="calculator__operations-grid">
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
-          <button class="blue">DEL</button>
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button>&#247;</button>
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>-</button>
-          <button>.</button>
-          <button>0</button>
-          <button>/</button>
-          <button>x</button>
-          <button class="span-two blue">RESET</button>
-          <button class="span-two red">=</button>
+        <div class="calculator__operations-grid keypad-bg">
+          <button data-number>7</button>
+          <button data-number>8</button>
+          <button data-number>9</button>
+          <button data-delete class="blue">DEL</button>
+          <button data-number>4</button>
+          <button data-number>5</button>
+          <button data-number>6</button>
+          <button data-operation>+</button>
+          <button data-number>1</button>
+          <button data-number>2</button>
+          <button data-number>3</button>
+          <button data-operation>-</button>
+          <button data-number>.</button>
+          <button data-number>0</button>
+          <button data-operation>/</button>
+          <button data-operation>x</button>
+          <button data-reset class="span-two blue">RESET</button>
+          <button data-equals class="span-two red">=</button>
         </div>
       </section>
     </main>
