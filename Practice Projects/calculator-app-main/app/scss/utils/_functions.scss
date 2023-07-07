@@ -2,16 +2,16 @@
 
 @function rem($pixel) {
   @if (math.is-unitless($pixel)) {
-    @return math.div($pixel, 16) + "rem";
+    @return math.div($pixel, 16) + rem;
   } @else {
-    @return "Error, unit is not allow with the rem function";
+    @error "Error, unit is not allow with the rem function";
   }
 }
 
 @function em($pixel) {
   @if (math.is-unitless($pixel)) {
-    @return math.div($pixel, 16) + "em";
+    @return math.div($pixel, 16) + em;
   } @else {
-    @return "Error, unit is not allow with the em function";
+    @error "Error, unit is not allow with the em function";
   }
 }

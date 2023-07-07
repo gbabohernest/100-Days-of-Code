@@ -33,3 +33,7 @@ $breakpoint-down: (
   grid-template-columns: repeat($columns, $size);
   grid-template-rows: repeat($rows, $row-size);
 }
+
+@mixin box-shadow($color) {
+  box-shadow: 0 4px 1px -1px $color;
+}

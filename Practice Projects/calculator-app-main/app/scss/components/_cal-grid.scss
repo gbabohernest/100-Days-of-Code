@@ -5,83 +5,73 @@
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-template-columns: repeat(4, 84px);
-    grid-template-rows: minmax(120px, auto);
+    grid-template-columns: repeat(4, u.rem(84));
+    grid-template-rows: minmax(u.rem(120), auto);
 
     @include u.breakpointsUp(medium) {
-      @include u.grid(4, 110px);
+      @include u.grid(4, u.rem(110));
     }
 
     &__output-wrapper {
       grid-column: 1 / -1;
-      background-color: var(
-        --theme1-bg-very-dark-blue-screen-bg
-      ); //temp - bg will change base on different themes
       display: flex;
       align-items: flex-end;
       justify-content: space-around;
       flex-direction: column;
-      padding: 10px;
-      padding-inline: 26px;
+      padding: u.rem(10);
+      padding-inline: u.rem(26);
       word-wrap: break-word;
       word-break: break-all;
-      border-radius: 5px;
+      border-radius: u.rem(5);
 
-      margin-bottom: 30px;
+      margin-bottom: u.rem(30);
 
       .prev-value {
-        color: var(--theme-1-text-white); //temp change
+        font-size: u.rem(25);
       }
 
       .current-value {
-        color: var(--theme-1-text-white); // temp change
+        @include u.breakpointsUp(medium) {
+          font-size: u.rem(48);
+        }
       }
     }
   }
 
   &__operations-grid {
     display: grid;
-    grid-template-columns: repeat(4, 74px);
-    grid-template-rows: repeat(5, 80px);
+    grid-template-columns: repeat(4, u.rem(74));
+    grid-template-rows: repeat(5, u.rem(80));
     align-content: center;
     justify-content: center;
-
-    background-color: var(--theme1-bg-very-dark-blue-toggle-keypad-bg); //theme1
-    border-radius: 5px;
-    padding: 15px;
+    border-radius: u.rem(5);
+    padding: u.rem(15);
 
     @include u.breakpointsUp(medium) {
-      @include u.grid-cal(4, 100px, 5, 70px);
+      @include u.grid-cal(4, u.rem(100), 5, u.rem(70));
     }
     .span-two {
       grid-column: span 2;
     }
 
     .blue {
-      background-color: var(--theme1-keys-dark-blue-key-bg);
-      color: var(--theme-1-text-white); //theme1 text-color
-      font-size: 19px;
+      color: var(--theme-1-text-white);
+      font-size: u.rem(19);
     }
 
     .red {
-      background-color: var(--theme1-keys-red-key-bg-toggle);
-      color: var(--theme-1-text-white); //theme1 text-color
+      color: var(--theme-1-text-white);
     }
     button {
       cursor: pointer;
-      font-size: 32px;
+      font-size: u.rem(32);
       font-weight: 700;
       border: none;
-      border-radius: 15px;
+      border-radius: u.rem(15);
       outline: none;
-      background-color: var(
-        --theme1-keys-light-grayish-orange-key-bg
-      ); //temp theme1 ch later
-      color: var(--theme1-text-very-dark-grayish-blue);
-
-      margin: 5px;
+      margin: u.rem(5);
       @include u.breakpointsUp(medium) {
-        margin: 10px;
+        margin: u.rem(10);
       }
 
       &:hover {
