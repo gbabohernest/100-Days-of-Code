@@ -14,6 +14,9 @@
   span.radio-btn {
     background-color: var(--theme3-keys-pure-cyan-key-bg-toggle);
     transition: all 300ms ease-in-out;
+    &:hover {
+      background-color: hsl(177, 77%, 74%);
+    }
   }
 
   div.bg-theme {
@@ -31,17 +34,29 @@
       background-color: var(--theme3-keys-dark-violet-key-bg);
       color: var(--theme3-text-white-text);
       @include u.box-shadow(var(--theme3-keys-vivid-magenta-key-shadow));
+
+      &:hover {
+        background-color: hsl(290, 89%, 35%);
+      }
     }
 
     .red {
       background-color: var(--theme3-keys-pure-cyan-key-bg-toggle);
       color: var(--theme3-text-very-dark-blue);
       @include u.box-shadow(var(--theme3-keys-soft-cyan-key-shadow));
+
+      &:hover {
+        background-color: hsl(177, 77%, 74%);
+      }
     }
     button {
       background-color: var(--theme3-keys-very-dark-violet-key-bg);
       color: var(--theme3-text-light-yellow);
       @include u.box-shadow(var(--theme3-keys-dark-magenta-key-shadow));
+
+      &:hover {
+        background-color: hsl(281, 92%, 31%);
+      }
     }
   }
 }

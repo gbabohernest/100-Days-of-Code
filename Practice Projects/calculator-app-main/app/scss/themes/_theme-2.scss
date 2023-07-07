@@ -11,6 +11,11 @@
   span.radio-btn {
     background-color: var(--theme2-keys-orange-key-bg-toggle);
     transition: all 300ms ease-in-out;
+
+    &:hover {
+      background-color: hsl(25, 100%, 61%);
+      opacity: 0.8;
+    }
   }
 
   div.bg-theme {
@@ -23,11 +28,21 @@
     .blue {
       background-color: var(--theme2-keys-dark-moderate-cyan-key-bg);
       @include u.box-shadow(var(--theme2-keys-very-dark-cyan-key-shadow));
+
+      &:hover {
+        background-color: hsl(185, 41%, 51%);
+        opacity: 0.8;
+      }
     }
 
     .red {
       background-color: var(--theme2-keys-orange-key-bg-toggle);
       @include u.box-shadow(var(--theme2-keys-dark-orange-key-shadow));
+
+      &:hover {
+        background-color: hsl(25, 100%, 61%);
+        opacity: 0.8;
+      }
     }
   }
   button {
