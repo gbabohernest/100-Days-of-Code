@@ -1,3 +1,4 @@
+@use "../utils/" as u;
 html {
   box-sizing: border-box;
   font-size: 100%;
@@ -11,10 +12,10 @@ html {
 body {
   padding: 0;
   margin: 0;
-  background-color: var(--theme1-bg-very-dark-blue-main-bg); //theme1 bg..ch
+  background-color: var(--theme1-bg-very-dark-blue-main-bg);
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: 32px;
+  font-size: u.rem(32);
 }
 
 main {
@@ -22,6 +23,24 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: min(100% - 20px, 500px);
+  width: min(100% - u.rem(20), u.rem(500));
   margin-inline: auto;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+.attribution {
+  font-size: u.rem(11);
+  text-align: center;
+  color: rgb(165, 152, 152);
+
+  a {
+    color: hsl(228, 48%, 67%);
+  }
 }

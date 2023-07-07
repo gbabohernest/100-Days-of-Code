@@ -1,0 +1,47 @@
+@use "../utils/" as u;
+
+.theme-3 {
+  color: var(--theme3-text-light-yellow);
+  transition: all 300ms ease-in-out;
+
+  span.radio-btn-bg {
+    background-color: var(
+      --theme3-bg-very-dark-violet-toggle-bg-keypad-bg-screen-bg
+    );
+    transition: all 300ms ease-in-out;
+  }
+
+  span.radio-btn {
+    background-color: var(--theme3-keys-pure-cyan-key-bg-toggle);
+    transition: all 300ms ease-in-out;
+  }
+
+  div.bg-theme {
+    background-color: var(
+      --theme3-bg-very-dark-violet-toggle-bg-keypad-bg-screen-bg
+    );
+  }
+
+  div.keypad-bg {
+    background-color: var(
+      --theme3-bg-very-dark-violet-toggle-bg-keypad-bg-screen-bg
+    );
+
+    .blue {
+      background-color: var(--theme3-keys-dark-violet-key-bg);
+      color: var(--theme3-text-white-text);
+      @include u.box-shadow(var(--theme3-keys-vivid-magenta-key-shadow));
+    }
+
+    .red {
+      background-color: var(--theme3-keys-pure-cyan-key-bg-toggle);
+      color: var(--theme3-text-very-dark-blue);
+      @include u.box-shadow(var(--theme3-keys-soft-cyan-key-shadow));
+    }
+    button {
+      background-color: var(--theme3-keys-very-dark-violet-key-bg);
+      color: var(--theme3-text-light-yellow);
+      @include u.box-shadow(var(--theme3-keys-dark-magenta-key-shadow));
+    }
+  }
+}
