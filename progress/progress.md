@@ -314,6 +314,8 @@
 
 ## Day 22 - 30 [June 30, 2023]
 
+**Today's Progress**
+
 - Start working on a testimonials-slider project from Frontend Mentor
 
 - create the markup for the entire project
@@ -331,3 +333,23 @@
 - I implemented the slider functionality with Javascript and dynamically adding the contents to the various element when the dom loads.
 
 - This project was another great way to practice my javascript skills and it was a great learning experience. I am looking forward to building more projects with javascript.
+
+## Day 31 - 39 [July 09, 2023]
+
+**Today's Progress**
+
+- Work on a Frontend Mentor Challenge (Calculator- app)
+
+- Create the markup for the entire project
+
+- Did general styling for the project
+
+- Implement computational functionalities
+
+- Style individual themes
+
+- Implement toggle functionalities to enable theme switching
+
+**Thoughts**
+
+- This project was a great learning experience for me. I did learn a lot while building the project. Making research, figuring things out, trying stuff out until it work. It took a while to complete this project but I try to soak up everything I could and build it out like the design, which I did and learn in the process.
