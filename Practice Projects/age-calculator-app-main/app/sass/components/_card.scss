@@ -1,4 +1,9 @@
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: min(100%, 600px);
+  margin-inline: auto;
   background: var(--white);
   padding: 30px;
   border: 1px solid var(--white);
@@ -8,6 +13,7 @@
   &__birthday {
     position: relative;
     margin-bottom: 50px;
+    width: 100%;
 
     hr {
       color: var(--off-white);
@@ -20,12 +26,14 @@
 
     &__wrapper {
       display: flex;
-      gap: 5px;
+      justify-content: space-between;
+      gap: 10px;
       margin-bottom: 40px;
     }
   }
 
   &__output {
+    width: 100%;
     p {
       margin: 0;
       font-size: 28px;
@@ -38,7 +46,7 @@
     }
   }
   input {
-    width: 75px;
+    width: 85px;
     // height: 30px;
     padding: 10px;
     border: 1.7px solid var(--light-grey);
@@ -46,9 +54,10 @@
     //font-size: 32px;
   }
   label {
-    font-size: 13px;
+    font-size: 10px;
     text-transform: uppercase;
     color: var(--smokey-grey);
+    letter-spacing: 2px;
   }
 }
 
@@ -64,9 +73,9 @@
   border-radius: 50%;
   text-align: center;
   position: absolute;
-  top: 70px;
-  right: 65px;
-  transform: translateX(-50%);
+  top: 73%;
+  right: 50%;
+  transform: translateX(50%);
 
   img {
     width: 100%;
