@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: min(100%, u.rem(420));
+  width: min(100%, u.em(564));
   margin-inline: auto;
   background: var(--white);
   padding: u.rem(30);
@@ -46,12 +46,14 @@
     margin-bottom: u.rem(20);
     p {
       margin: 0;
-      font-size: u.rem(32);
+      font-size: u.rem(45);
       color: var(--off-black);
       font-weight: 800;
+      font-style: italic;
+      margin-bottom: u.rem(-24);
 
       @include u.breakpoint(medium) {
-        font-size: u.rem(50);
+        font-size: u.rem(65);
       }
 
       span {
@@ -60,13 +62,18 @@
     }
   }
   input {
-    width: u.rem(85);
+    width: u.em(85);
     padding: u.rem(10);
     border: u.rem(1.7) solid var(--light-grey);
     border-radius: u.rem(5);
-    //font-size: 32px;
+    font-size: u.rem(15);
     font-weight: 800;
     cursor: pointer;
+
+    @include u.breakpoint(medium) {
+      width: u.em(117.008);
+      font-size: u.rem(20);
+    }
   }
   label {
     font-size: u.rem(10);
