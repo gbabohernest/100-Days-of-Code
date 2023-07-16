@@ -8,6 +8,11 @@ class AgeCalculator {
     this.day = day;
     this.month = month;
     this.year = year;
+
+    // ! select elements to display error messages
+    this.dayErrorMsg = document.querySelector("#ddErr");
+    this.monthErrorMsg = document.querySelector("#mmErr");
+    this.yearErrorMsg = document.querySelector("#yyErr");
   }
 
   // ! set error message for all empty inputs
@@ -59,12 +64,12 @@ class AgeCalculator {
   */
   checkEmptyInputFields(birthDay, birthMonth, birthYear) {
     // ! select elements to display error messages
-    const dayErrorMsg = document.querySelector("#ddErr");
-    const monthErrorMsg = document.querySelector("#mmErr");
-    const yearErrorMsg = document.querySelector("#yyErr");
+    // const dayErrorMsg = document.querySelector("#ddErr");
+    // const monthErrorMsg = document.querySelector("#mmErr");
+    // const yearErrorMsg = document.querySelector("#yyErr");
 
     // ! An array for error messages
-    const errors = [dayErrorMsg, monthErrorMsg, yearErrorMsg];
+    const errors = [this.dayErrorMsg, this.monthErrorMsg, this.yearErrorMsg];
 
     const dayValue = birthDay.value.length === 0;
     const monthValue = birthMonth.value.length === 0;
@@ -72,29 +77,45 @@ class AgeCalculator {
 
     if (dayValue && monthValue && yearValue) {
       this.setErrorColor();
-      this.setErrorMsgForAllFields(dayErrorMsg, monthErrorMsg, yearErrorMsg);
+      this.setErrorMsgForAllFields(
+        this.dayErrorMsg,
+        this.monthErrorMsg,
+        this.yearErrorMsg
+      );
     }
 
     if (dayValue) {
       this.setErrorColor();
-      this.setErrorMsgForAllFields(dayErrorMsg, monthErrorMsg, yearErrorMsg);
+      this.setErrorMsgForAllFields(
+        this.dayErrorMsg,
+        this.monthErrorMsg,
+        this.yearErrorMsg
+      );
     }
     if (monthValue) {
       this.setErrorColor();
-      this.setErrorMsgForAllFields(dayErrorMsg, monthErrorMsg, yearErrorMsg);
+      this.setErrorMsgForAllFields(
+        this.dayErrorMsg,
+        this.monthErrorMsg,
+        this.yearErrorMsg
+      );
     }
     if (yearValue) {
       this.setErrorColor();
-      this.setErrorMsgForAllFields(dayErrorMsg, monthErrorMsg, yearErrorMsg);
+      this.setErrorMsgForAllFields(
+        this.dayErrorMsg,
+        this.monthErrorMsg,
+        this.yearErrorMsg
+      );
     }
     if (!dayValue) {
-      this.customErrorMessage(dayErrorMsg, "", "");
+      this.customErrorMessage(this.dayErrorMsg, "", "");
     }
     if (!monthValue) {
-      this.customErrorMessage(monthErrorMsg, "", "");
+      this.customErrorMessage(this.monthErrorMsg, "", "");
     }
     if (!yearValue) {
-      this.customErrorMessage(yearErrorMsg, "", "");
+      this.customErrorMessage(this.yearErrorMsg, "", "");
     }
     if (!dayValue && !monthValue && !yearValue) {
       this.clearErrorColor(errors);
@@ -103,20 +124,27 @@ class AgeCalculator {
     }
   }
 
-  sanitizeInputFieldValue(dd, mm, yy) {
-    const dayValue = parseInt(this.dd);
-    const monthValue = parseInt(this.mm);
-    const yearValue = parseInt(this.yy);
+  sanitizeInputFieldsValues(dd, mm, yy) {
+    const day = parseInt(dd.value);
+    const month = parseInt(mm.value);
+    const year = parseInt(yy.value);
 
-    // if (dayValue === 0 || dayValue > 31) {
-    //   console.log("invalied day");
-    // }
-    console.log(dayValue);
+    if (day === 0 || day > 31) {
+      this.setErrorColor();
+      this.customErrorMessage(
+        this.dayErrorMsg,
+        "Must be a valid day",
+        "hsl(0, 100%, 67%)"
+      );
+    }
+
+    console.log(day, month, year);
   }
 
   //validate input field for empty values
   validateInputFields() {
     this.checkEmptyInputFields(this.day, this.month, this.year);
+    this.sanitizeInputFieldsValues(this.day, this.month, this.year);
   }
 }
 
