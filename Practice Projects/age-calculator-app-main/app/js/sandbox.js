@@ -134,7 +134,7 @@ class AgeCalculator {
     const currentMonth = currentDate.getMonth() + 1;
     const currentDay = currentDate.getDate();
 
-    const totalDaysInAMonth = this.getTotalNumOfDaysInMonth(yy, mm);
+    const totalDaysInAMonth = this.getTotalNumOfDaysInMonth(year, month);
     const yearLength = year.toString().split("").length;
 
     if (day <= 0 || day > 31) {
@@ -201,7 +201,27 @@ class AgeCalculator {
     this.calculateAge(day, month, year);
   }
 
-  calculateAge(dd, mm, yy) {}
+  //! Calculate User's Age in Days, Months, and Years
+  calculateAge(dd, mm, yy) {
+    const birthDate = new Date(`${yy}-${mm}-${dd}`);
+    const currentDate = new Date();
+
+    const ageInMilliseconds = new Date(Date.now() - birthDate.getTime());
+
+    const ageInYears = ageInMilliseconds.getFullYear() - 1970;
+    const ageInMonths = ageInMilliseconds.getMonth();
+    const ageInDays = ageInMilliseconds.getDate() - 1;
+
+    //this.isLeapYear(yy, ageInDays);
+
+    console.log(ageInYears, ageInMonths, ageInDays);
+  }
+
+  // ! Checks if a Year Is A Leap Year
+  isLeapYear(year, days) {
+    if (year % 4 === 0 && (year % 100 !== 0 || year % 400 == 0)) {
+    }
+  }
 
   //! Return the Amount of Days In A Given month
   getTotalNumOfDaysInMonth(year, month) {
