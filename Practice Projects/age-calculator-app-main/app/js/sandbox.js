@@ -9,19 +9,20 @@ class AgeCalculator {
     this.month = month;
     this.year = year;
 
-    // ! select elements to display error messages
+    // ! Select elements to display error messages
     this.dayErrorMsg = document.querySelector("#ddErr");
     this.monthErrorMsg = document.querySelector("#mmErr");
     this.yearErrorMsg = document.querySelector("#yyErr");
   }
 
-  // ! set error message for all empty inputs
+  // ! Sets Error Message for all Empty Inputs
   setErrorMsgForAllFields(dd, mm, yy) {
     this.customErrorMessage(dd, "This field is required", "hsl(0, 100%, 67%)");
     this.customErrorMessage(mm, "This field is required", "hsl(0, 100%, 67%)");
     this.customErrorMessage(yy, "This field is required", "hsl(0, 100%, 67%)");
   }
-  // ! Sets the color for all error messages
+
+  // ! Sets color value for all Error Messages
   setErrorColor() {
     const labels = document.querySelectorAll("label");
     const inputs = document.querySelectorAll("input");
@@ -32,13 +33,16 @@ class AgeCalculator {
       labels[index].style.opacity = ".6";
     });
   }
-  //! custom error message
-  customErrorMessage(elem, msg, color) {
-    elem.textContent = msg;
-    elem.style.color = color;
+
+  //! Custom Error Message
+  customErrorMessage(element, message, color) {
+    element.textContent = message;
+    element.style.color = color;
   }
+
   /**
-   * ! clears the respective error color and message and set it to its default value
+   * ! Clears the Respective Error Message
+   * ! And sets  its  color value to default
    * ! @errors = an array of element that display error message
    */
   clearErrorColor(errors) {
@@ -52,23 +56,15 @@ class AgeCalculator {
       input.style.borderColor = "hsl(0, 0%, 86%)";
       labels[index].style.color = "hsl(0, 1%, 44%)";
       labels[index].style.opacity = "1";
-
-      // input.style.transition = "all";
-      // input.style.transition = "3ms ease-in-out";
-      // input.value = "";
     });
   }
 
   /*
-   ! checks if an input field is empty & display the appropriate message to the user
+   ! Checks if an Input field is Empty 
+   ! And Display the appropriate Error Message to the user
   */
   checkEmptyInputFields(birthDay, birthMonth, birthYear) {
-    // ! select elements to display error messages
-    // const dayErrorMsg = document.querySelector("#ddErr");
-    // const monthErrorMsg = document.querySelector("#mmErr");
-    // const yearErrorMsg = document.querySelector("#yyErr");
-
-    // ! An array for error messages
+    // ! An array of elements
     const errors = [this.dayErrorMsg, this.monthErrorMsg, this.yearErrorMsg];
 
     const dayValue = birthDay.value.length === 0;
@@ -119,17 +115,23 @@ class AgeCalculator {
     }
     if (!dayValue && !monthValue && !yearValue) {
       this.clearErrorColor(errors);
-      console.log("okkkay");
-      //this.sanitizeInputFieldValue(dayValue, monthValue, yearValue);
+      this.sanitizeInputFieldsValues(birthDay, birthMonth, birthYear);
     }
   }
 
+  /*
+    ! Sanitize the values from the Inputs
+    ! And Display custom Error Message 
+  */
   sanitizeInputFieldsValues(dd, mm, yy) {
     const day = parseInt(dd.value);
     const month = parseInt(mm.value);
     const year = parseInt(yy.value);
 
-    if (day === 0 || day > 31) {
+    const currentYear = new Date().getFullYear();
+    const yearLength = year.toString().split("").length;
+
+    if (day <= 0 || day > 31) {
       this.setErrorColor();
       this.customErrorMessage(
         this.dayErrorMsg,
@@ -137,14 +139,65 @@ class AgeCalculator {
         "hsl(0, 100%, 67%)"
       );
     }
+    if (month <= 0 || month > 12) {
+      this.setErrorColor();
+      this.customErrorMessage(
+        this.monthErrorMsg,
+        "Must be a valid month",
+        "hsl(0, 100%, 67%)"
+      );
+    }
 
-    console.log(day, month, year);
+    if (yearLength !== 4) {
+      this.setErrorColor();
+      this.customErrorMessage(
+        this.yearErrorMsg,
+        "Must be a valid year",
+        "hsl(0, 100%, 67%)"
+      );
+    }
+    if (year > currentYear) {
+      this.setErrorColor();
+      this.customErrorMessage(
+        this.yearErrorMsg,
+        "Must be in the past",
+        "hsl(0, 100%, 67%)"
+      );
+    }
+
+    //! process the data
+    this.processSanitizedData(day, month, year);
+  }
+
+  //? TODOS
+  //!! NOT COMPLETE
+  //! Process sanitized data
+  processSanitizedData(dd, mm, yy) {
+    const currentDate = new Date();
+    const day = currentDate.getDate();
+    const month = currentDate.getMonth();
+    const year = currentDate.getFullYear();
+
+    const totalDaysInAMonth = this.getTotalNumOfDaysInMonth(yy, mm);
+    if (dd > totalDaysInAMonth) {
+      this.setErrorColor();
+      this.customErrorMessage(
+        this.dayErrorMsg,
+        "Must be a valid date",
+        "hsl(0, 100%, 67%)"
+      );
+    }
+  }
+
+  //! Return the Amount of Days In A Given month
+  getTotalNumOfDaysInMonth(year, month) {
+    const date = new Date(year, month, 0);
+    return date.getDate();
   }
 
   //validate input field for empty values
   validateInputFields() {
     this.checkEmptyInputFields(this.day, this.month, this.year);
-    this.sanitizeInputFieldsValues(this.day, this.month, this.year);
   }
 }
 
