@@ -88,6 +88,7 @@ class AgeCalculator {
         this.yearErrorMsg
       );
     }
+
     if (monthValue) {
       this.setErrorColor();
       this.setErrorMsgForAllFields(
@@ -128,7 +129,12 @@ class AgeCalculator {
     const month = parseInt(mm.value);
     const year = parseInt(yy.value);
 
-    const currentYear = new Date().getFullYear();
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    const currentMonth = currentDate.getMonth() + 1;
+    const currentDay = currentDate.getDate();
+
+    const totalDaysInAMonth = this.getTotalNumOfDaysInMonth(yy, mm);
     const yearLength = year.toString().split("").length;
 
     if (day <= 0 || day > 31) {
@@ -165,21 +171,7 @@ class AgeCalculator {
       );
     }
 
-    //! process the data
-    this.processSanitizedData(day, month, year);
-  }
-
-  //? TODOS
-  //!! NOT COMPLETE
-  //! Process sanitized data
-  processSanitizedData(dd, mm, yy) {
-    const currentDate = new Date();
-    const day = currentDate.getDate();
-    const month = currentDate.getMonth();
-    const year = currentDate.getFullYear();
-
-    const totalDaysInAMonth = this.getTotalNumOfDaysInMonth(yy, mm);
-    if (dd > totalDaysInAMonth) {
+    if (day > totalDaysInAMonth) {
       this.setErrorColor();
       this.customErrorMessage(
         this.dayErrorMsg,
@@ -187,7 +179,29 @@ class AgeCalculator {
         "hsl(0, 100%, 67%)"
       );
     }
+    if (day > currentDay && month === currentMonth && year === currentYear) {
+      this.setErrorColor();
+      this.customErrorMessage(
+        this.dayErrorMsg,
+        "Must be a valid day",
+        "hsl(0, 100%, 67%)"
+      );
+    }
+
+    if (month > currentMonth && year === currentYear) {
+      this.setErrorColor();
+      this.customErrorMessage(
+        this.monthErrorMsg,
+        "Must be a valid month",
+        "hsl(0, 100%, 67%)"
+      );
+    }
+
+    //calculate user's age
+    this.calculateAge(day, month, year);
   }
+
+  calculateAge(dd, mm, yy) {}
 
   //! Return the Amount of Days In A Given month
   getTotalNumOfDaysInMonth(year, month) {
