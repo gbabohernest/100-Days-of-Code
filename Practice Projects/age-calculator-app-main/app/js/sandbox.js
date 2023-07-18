@@ -187,7 +187,7 @@ class AgeCalculator {
         "hsl(0, 100%, 67%)"
       );
     } else {
-      // ! if there no errors, calculate & update user's age
+      // ! if there are no errors, calculate & update user's age
       if (
         errors[0].style.color !== "hsl(0, 100%, 67%)" &&
         errors[1].style.color !== "hsl(0, 100%, 67%)" &&
@@ -213,16 +213,32 @@ class AgeCalculator {
 
   //! Display user's age in browser
   updateUserAge(dd, mm, yy) {
+    //! select the elements to display the age values in.
     const years = document.querySelector("#ageInYears");
     const months = document.querySelector("#ageInMonths");
     const days = document.querySelector("#ageInDays");
 
     const age = this.calculateAge(dd, mm, yy);
-    const values = [years, months, days];
+    const arrOfElements = [years, months, days];
+    this.animateAgeValues(0, age, arrOfElements);
+  }
 
-    values.forEach((value, index) => {
-      value.textContent = age[index];
-    });
+  animateAgeValues(startingAge, age, arrOfElements, duration = 1000) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      arrOfElements.forEach((element, index) => {
+        element.textContent = Math.floor(
+          progress * (age[index] - startingAge) + startingAge
+        );
+      });
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+
+    window.requestAnimationFrame(step);
   }
 
   //! Return the Amount of Days In A Given month
