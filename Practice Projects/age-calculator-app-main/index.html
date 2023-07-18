@@ -23,17 +23,6 @@
     <!-- js -->
     <script src="./app/js/sandbox.js" defer></script>
     <title>Frontend Mentor | Age calculator app</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <main>
@@ -80,7 +69,7 @@
                 <span class="error" id="yyErr"></span>
               </div>
             </div>
-            <button type="submit" class="img-wrapper">
+            <button type="submit" class="img-wrapper" id="btn">
               <img src="assets/images/icon-arrow.svg" alt="icon-arrow" />
             </button>
           </form>
@@ -89,17 +78,17 @@
 
         <article class="card__output">
           <p>
-            <span id="ageInYears">38</span>
+            <span id="ageInYears">--</span>
             years
           </p>
 
           <p>
-            <span id="ageInMonths">3</span>
+            <span id="ageInMonths">--</span>
             months
           </p>
 
           <p>
-            <span id="ageInDays">26</span>
+            <span id="ageInDays">--</span>
             days
           </p>
         </article>

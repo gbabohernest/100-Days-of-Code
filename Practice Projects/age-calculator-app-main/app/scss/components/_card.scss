@@ -4,13 +4,18 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: min(100%, u.em(564));
+  width: min(100%, u.em(630));
+  height: u.rem(550);
   margin-inline: auto;
   background: var(--white);
   padding: u.rem(30);
   border: u.rem(1) solid var(--white);
   border-radius: u.rem(25);
   border-bottom-right-radius: u.rem(95);
+
+  @include u.breakpoint(medium) {
+    height: auto;
+  }
 
   &__birthday {
     position: relative;
@@ -34,6 +39,11 @@
 
       @include u.breakpoint(medium) {
         justify-content: flex-start;
+        gap: u.rem(24);
+      }
+
+      @include u.breakpointSmall(small) {
+        gap: 3%;
       }
     }
     span {
@@ -73,7 +83,6 @@
   input {
     width: u.em(85);
     height: u.rem(44);
-    // padding: u.rem(10);
     padding-left: u.rem(11.6);
     border: u.rem(1.7) solid var(--light-grey);
     border-radius: u.rem(5);
@@ -148,5 +157,29 @@ button {
 
   &:hover {
     background: var(--off-black);
+  }
+}
+
+@media screen and (min-width: u.em(450)) {
+  .card input {
+    width: u.rem(109);
+  }
+}
+
+@media screen and (min-width: u.em(479)) {
+  .card input {
+    width: u.rem(118);
+  }
+}
+
+@media screen and (max-width: u.em(361)) {
+  .card input {
+    width: u.rem(50);
+    padding-left: 0;
+    text-align: center;
+    font-size: u.rem(12);
+  }
+  div .container {
+    align-items: center;
   }
 }

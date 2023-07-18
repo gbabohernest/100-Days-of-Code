@@ -199,6 +199,7 @@ class AgeCalculator {
   }
 
   //! Calculate User's Age in Days, Months, and Years
+  //! And return the age values
   calculateAge(dd, mm, yy) {
     const birthDate = new Date(`${yy}-${mm}-${dd}`);
     const currentDate = new Date();
@@ -211,7 +212,7 @@ class AgeCalculator {
     return [ageInYears, ageInMonths, ageInDays];
   }
 
-  //! Display user's age in browser
+  //! Display User's Age in  the browser
   updateUserAge(dd, mm, yy) {
     //! select the elements to display the age values in.
     const years = document.querySelector("#ageInYears");
@@ -223,6 +224,7 @@ class AgeCalculator {
     this.animateAgeValues(0, age, arrOfElements);
   }
 
+  //! Animate the age values in the DOM
   animateAgeValues(startingAge, age, arrOfElements, duration = 1000) {
     let startTimestamp = null;
     const step = (timestamp) => {

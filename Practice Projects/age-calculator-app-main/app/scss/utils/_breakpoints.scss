@@ -1,12 +1,22 @@
 @use "functions" as f;
 
 $breakpoint: (
-  "medium": f.em(500),
+  "medium": f.em(564),
   "large": f.em(750),
+);
+
+$breakpointSmall: (
+  "small": f.em(412),
 );
 
 @mixin breakpoint($size) {
   @media screen and (min-width: map-get($breakpoint, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpointSmall($size) {
+  @media screen and (min-width: map-get($breakpointSmall, $size)) {
     @content;
   }
 }
