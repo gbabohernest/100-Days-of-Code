@@ -63,7 +63,7 @@ class AgeCalculator {
    ! Checks if an Input field is Empty 
    ! And Display the appropriate Error Message to the user
   */
-  checkEmptyInputFields(birthDay, birthMonth, birthYear) {
+  validateInputFields(birthDay, birthMonth, birthYear) {
     // ! An array of elements
     const errors = [this.dayErrorMsg, this.monthErrorMsg, this.yearErrorMsg];
 
@@ -78,26 +78,21 @@ class AgeCalculator {
         this.monthErrorMsg,
         this.yearErrorMsg
       );
-    }
-
-    if (dayValue) {
+    } else if (dayValue) {
       this.setErrorColor();
       this.setErrorMsgForAllFields(
         this.dayErrorMsg,
         this.monthErrorMsg,
         this.yearErrorMsg
       );
-    }
-
-    if (monthValue) {
+    } else if (monthValue) {
       this.setErrorColor();
       this.setErrorMsgForAllFields(
         this.dayErrorMsg,
         this.monthErrorMsg,
         this.yearErrorMsg
       );
-    }
-    if (yearValue) {
+    } else if (yearValue) {
       this.setErrorColor();
       this.setErrorMsgForAllFields(
         this.dayErrorMsg,
@@ -129,6 +124,7 @@ class AgeCalculator {
     const month = parseInt(mm.value);
     const year = parseInt(yy.value);
 
+    const errors = [this.dayErrorMsg, this.monthErrorMsg, this.yearErrorMsg];
     const currentDate = new Date();
     const currentYear = currentDate.getFullYear();
     const currentMonth = currentDate.getMonth() + 1;
@@ -144,61 +140,62 @@ class AgeCalculator {
         "Must be a valid day",
         "hsl(0, 100%, 67%)"
       );
-    }
-    if (month <= 0 || month > 12) {
+    } else if (month <= 0 || month > 12) {
       this.setErrorColor();
       this.customErrorMessage(
         this.monthErrorMsg,
         "Must be a valid month",
         "hsl(0, 100%, 67%)"
       );
-    }
-
-    if (yearLength !== 4) {
+    } else if (yearLength !== 4) {
       this.setErrorColor();
       this.customErrorMessage(
         this.yearErrorMsg,
         "Must be a valid year",
         "hsl(0, 100%, 67%)"
       );
-    }
-    if (year > currentYear) {
+    } else if (year > currentYear) {
       this.setErrorColor();
       this.customErrorMessage(
         this.yearErrorMsg,
         "Must be in the past",
         "hsl(0, 100%, 67%)"
       );
-    }
-
-    if (day > totalDaysInAMonth) {
+    } else if (day > totalDaysInAMonth) {
       this.setErrorColor();
       this.customErrorMessage(
         this.dayErrorMsg,
         "Must be a valid date",
         "hsl(0, 100%, 67%)"
       );
-    }
-    if (day > currentDay && month === currentMonth && year === currentYear) {
+    } else if (
+      day > currentDay &&
+      month === currentMonth &&
+      year === currentYear
+    ) {
       this.setErrorColor();
       this.customErrorMessage(
         this.dayErrorMsg,
         "Must be a valid day",
         "hsl(0, 100%, 67%)"
       );
-    }
-
-    if (month > currentMonth && year === currentYear) {
+    } else if (month > currentMonth && year === currentYear) {
       this.setErrorColor();
       this.customErrorMessage(
         this.monthErrorMsg,
         "Must be a valid month",
         "hsl(0, 100%, 67%)"
       );
+    } else {
+      // ! if there no errors, calculate & update user's age
+      if (
+        errors[0].style.color !== "hsl(0, 100%, 67%)" &&
+        errors[1].style.color !== "hsl(0, 100%, 67%)" &&
+        errors[2].style.color !== "hsl(0, 100%, 67%)"
+      ) {
+        this.updateUserAge(day, month, year);
+      }
     }
-
-    //calculate user's age
-    this.calculateAge(day, month, year);
   }
 
   //! Calculate User's Age in Days, Months, and Years
@@ -206,21 +203,26 @@ class AgeCalculator {
     const birthDate = new Date(`${yy}-${mm}-${dd}`);
     const currentDate = new Date();
 
-    const ageInMilliseconds = new Date(Date.now() - birthDate.getTime());
-
+    const ageInMilliseconds = new Date(currentDate - birthDate);
     const ageInYears = ageInMilliseconds.getFullYear() - 1970;
     const ageInMonths = ageInMilliseconds.getMonth();
-    const ageInDays = ageInMilliseconds.getDate() - 1;
+    const ageInDays = Math.abs(1 - ageInMilliseconds.getDate());
 
-    //this.isLeapYear(yy, ageInDays);
-
-    console.log(ageInYears, ageInMonths, ageInDays);
+    return [ageInYears, ageInMonths, ageInDays];
   }
 
-  // ! Checks if a Year Is A Leap Year
-  isLeapYear(year, days) {
-    if (year % 4 === 0 && (year % 100 !== 0 || year % 400 == 0)) {
-    }
+  //! Display user's age in browser
+  updateUserAge(dd, mm, yy) {
+    const years = document.querySelector("#ageInYears");
+    const months = document.querySelector("#ageInMonths");
+    const days = document.querySelector("#ageInDays");
+
+    const age = this.calculateAge(dd, mm, yy);
+    const values = [years, months, days];
+
+    values.forEach((value, index) => {
+      value.textContent = age[index];
+    });
   }
 
   //! Return the Amount of Days In A Given month
@@ -228,17 +230,10 @@ class AgeCalculator {
     const date = new Date(year, month, 0);
     return date.getDate();
   }
-
-  //validate input field for empty values
-  validateInputFields() {
-    this.checkEmptyInputFields(this.day, this.month, this.year);
-  }
 }
 
 const ageCal = new AgeCalculator(day, month, year);
 button.addEventListener("click", (e) => {
   e.preventDefault();
-  ageCal.validateInputFields();
-  console.log("let see");
-  //validateInputValues();
+  ageCal.validateInputFields(day, month, year);
 });
