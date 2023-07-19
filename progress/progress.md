@@ -353,3 +353,17 @@
 **Thoughts**
 
 - This project was a great learning experience for me. I did learn a lot while building the project. Making research, figuring things out, trying stuff out until it work. It took a while to complete this project but I try to soak up everything I could and build it out like the design, which I did and learn in the process.
+
+## Day 40 - 49 [July 18, 2023]
+
+**Today's Progress**
+
+- Wrote exams for week while working on a project from frontend mentors
+
+- Learn Asynchronous Javascript
+
+- Completed the Age calculator project from frontend mentor
+
+**Thoughts**
+
+- Despite a week of writing exams, I persevered and completed the project i was working on before and I was able to learn asynchronous javascript. I am looking forward to my next project where I am hoping to implement new concepts and up skill my knowledge of the language.
