@@ -1,0 +1,115 @@
+@use '../utils/' as u;
+.intro-section {
+  @include u.breakpoints-up(large) {
+    width: min(100% - 16.5rem, 1164px);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    margin-inline: auto;
+
+    gap: 2rem;
+    grid-template-areas: 'text-content image-container';
+  }
+
+  &__img-container {
+    width: 100%;
+    grid-area: image-container;
+
+    @include u.breakpoints-up(large) {
+      // display: block;
+      // width: 80%;
+      width: 87%;
+    }
+
+    img {
+      width: 100%;
+      object-fit: contain;
+      @include u.breakpoints-up(large) {
+        // display: block;
+        // width: 100%;
+        width: 99%;
+      }
+    }
+    img.mobile-img {
+      display: none;
+      @include u.breakpoints-down(medium) {
+        display: block;
+      }
+    }
+
+    img.desktop-img {
+      display: none;
+      @include u.breakpoints-up(large) {
+        display: block;
+        // width: 70%;
+      }
+    }
+  }
+
+  &__textual-contents {
+    grid-area: text-content;
+    text-align: center;
+    margin-top: 2rem;
+    padding-inline: 0.8rem;
+
+    @include u.breakpoints-up(large) {
+      // margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 30px;
+      text-align: left;
+    }
+
+    h1 {
+      @include u.breakpoints-up(large) {
+        font-size: 3rem;
+        padding-right: 13.5rem;
+        // padding-top: 1rem;
+      }
+    }
+    p {
+      text-align: center;
+      margin-top: 0.6rem;
+      font-size: 1rem;
+      color: var(--medium-gray);
+
+      @include u.breakpoints-up(large) {
+        text-align: left;
+        padding-right: 7rem;
+      }
+    }
+
+    a {
+      display: inline-block;
+      background-color: var(--almost-black);
+      padding: 0.7rem 0.9rem;
+      color: var(--almost-white);
+      border-radius: 1rem;
+      margin-top: 1.5rem;
+      transition: all 0.3s linear;
+      cursor: pointer;
+
+      &:hover {
+        background-color: transparent;
+        border: 1px solid var(--almost-black);
+        color: var(--almost-black);
+      }
+    }
+  }
+
+  .sponsors-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+
+    img {
+      width: 30%;
+      object-fit: contain;
+    }
+  }
+}
