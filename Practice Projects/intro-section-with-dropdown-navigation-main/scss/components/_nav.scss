@@ -1,4 +1,4 @@
-@use "../utils/" as u;
+@use '../utils/' as u;
 
 header {
   @extend %spacing;
@@ -6,7 +6,8 @@ header {
 
 .navbar {
   @include u.flex(space-between);
-  font-size: 1rem;
+  // font-size: 1rem;
+  font-size: 0.8125rem;
   cursor: pointer;
   position: relative;
 
@@ -26,8 +27,12 @@ header {
     }
   }
 
-  &__links-btn {
-    padding-right: 4rem;
+  &__logo {
+    width: 80px;
+  }
+
+  /*   &__links-btn {
+    //padding-right: 4rem;
 
     a {
       // display: inline-block;
@@ -39,7 +44,7 @@ header {
         padding: 0.7rem 0.9rem;
         border: 1px solid var(--almost-black);
         border-radius: 1rem;
-        margin-top: 1.5rem;
+        //margin-top: 1.5rem;
         transition: all 0.3s linear;
       }
 
@@ -47,7 +52,7 @@ header {
         font-weight: bold;
       }
     }
-  }
+  } */
 }
 
 //dropdown menu styles
@@ -55,7 +60,7 @@ header {
   &__list {
     @include u.flex(space-between);
 
-    &-item {
+    /* &-item {
       &:not(:last-child) {
         padding-right: 1rem;
       }
@@ -66,7 +71,7 @@ header {
       img {
         padding-left: 0.6rem;
       }
-    }
+    } */
 
     /**
     * Todo: fix the dropdown styles 

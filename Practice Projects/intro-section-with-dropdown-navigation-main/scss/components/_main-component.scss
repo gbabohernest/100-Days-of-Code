@@ -1,7 +1,8 @@
 @use '../utils/' as u;
 .intro-section {
   @include u.breakpoints-up(large) {
-    width: min(100% - 16.5rem, 1164px);
+    // width: min(100% - 16.5rem, 1164px);
+    width: min(90vw, 1164px);
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -19,7 +20,8 @@
     @include u.breakpoints-up(large) {
       // display: block;
       // width: 80%;
-      width: 87%;
+      //width: 87%;
+      width: 100%;
     }
 
     img {
@@ -28,7 +30,7 @@
       @include u.breakpoints-up(large) {
         // display: block;
         // width: 100%;
-        width: 99%;
+        width: 365px;
       }
     }
     img.mobile-img {
@@ -82,7 +84,7 @@
       }
     }
 
-    a {
+    /* a {
       display: inline-block;
       background-color: var(--almost-black);
       padding: 0.7rem 0.9rem;
@@ -97,7 +99,7 @@
         border: 1px solid var(--almost-black);
         color: var(--almost-black);
       }
-    }
+    } */
   }
 
   .sponsors-logo {
