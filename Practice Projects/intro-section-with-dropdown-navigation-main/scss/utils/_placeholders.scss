@@ -1,0 +1,19 @@
+%spacing {
+  // padding: 1.4rem;
+  padding: 1rem 1rem 0.8rem;
+}
+
+%sub-menu {
+  position: absolute;
+  top: 64px;
+  border: 1px solid var(--almost-white);
+  border-radius: 0.5rem;
+  padding: 1.25rem 1.25rem 0.3125rem;
+  background: var(--almost-white);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  p {
+    font-size: 0.625rem;
+    color: var(--medium-gray);
+  }
+}

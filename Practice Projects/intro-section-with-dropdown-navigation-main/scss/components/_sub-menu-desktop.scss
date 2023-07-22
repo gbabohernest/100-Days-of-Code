@@ -1,0 +1,21 @@
+@use '../utils/' as u;
+
+// ? Dropdown menu styles for Desktop
+
+.sub-menu {
+  // display: none;
+  @extend %sub-menu;
+  left: 80px;
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 12px;
+    gap: 12px;
+  }
+}
+
+.sub-menu-2 {
+  @extend %sub-menu;
+  left: 19%;
+}
