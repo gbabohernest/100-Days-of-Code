@@ -6,8 +6,7 @@ header {
 
 .navbar {
   @include u.flex(space-between);
-  // font-size: 1rem;
-  font-size: 0.8125rem;
+  font-size: 0.625rem;
   cursor: pointer;
   position: relative;
 
@@ -29,68 +28,45 @@ header {
 
   &__logo {
     width: 80px;
+    display: inline-block;
+    margin-top: 0.4375rem;
   }
 
-  /*   &__links-btn {
-    //padding-right: 4rem;
+  &__links-btn {
+    display: inline-flex;
+    align-items: center;
+    margin-inline-end: 1rem;
+    gap: 1.875rem;
 
     a {
-      // display: inline-block;
-      &:first-of-type {
-        padding-right: 1rem;
-      }
-
       &:last-of-type {
-        padding: 0.7rem 0.9rem;
-        border: 1px solid var(--almost-black);
-        border-radius: 1rem;
-        //margin-top: 1.5rem;
-        transition: all 0.3s linear;
+        @extend %border;
       }
 
       &:hover {
-        font-weight: bold;
+        color: var(--almost-black);
+        transition: all 0.3s ease-in-out;
       }
     }
-  } */
+  }
 }
 
-//dropdown menu styles
 .navbar {
   &__list {
     @include u.flex(space-between);
+    gap: 1.875rem;
 
-    /* &-item {
-      &:not(:last-child) {
-        padding-right: 1rem;
-      }
-      &:hover {
-        font-weight: bold;
-      }
-
+    &-item {
+      padding-right: 1rem;
       img {
-        padding-left: 0.6rem;
+        display: inline-block;
+        margin-left: 0.125rem;
       }
-    } */
 
-    /**
-    * Todo: fix the dropdown styles 
-    */
-    .sub-menu {
-      // display: none;
-      position: absolute;
-      top: 36px;
-      // left: 91px;
-      // padding: 0.5rem;
-      background-color: var(--medium-gray);
-      opacity: 0.6;
-      // margin-right: 2rem;
-    }
-
-    .subm-menu-2 {
-      position: absolute;
-      top: 36px;
-      margin-left: 20px;
+      &:hover {
+        color: var(--almost-black);
+        transition: all 0.3s ease-in-out;
+      }
     }
 
     img.arrow-up {
@@ -103,15 +79,14 @@ nav {
   .flex {
     @include u.flex(center);
     gap: 3rem;
-
-    img {
-      margin-top: 0.3125rem;
-    }
   }
 }
 .open {
   display: block;
 }
+
+//? mobile nav styles
+
 .mobile-nav-container {
   display: none;
   background: gray;
@@ -148,33 +123,12 @@ nav {
       display: inline-block;
       color: var(--medium-gray);
       &:last-of-type {
-        border: 1px solid var(--medium-gray);
-        padding: 0.4rem 3rem;
-        border-radius: 1rem;
+        @extend %border;
       }
     }
   }
 
   img.arrow-up {
     display: inline-block;
-  }
-
-  &__sub-menu {
-    display: block;
-    // margin: 0.5rem 0 0.4rem 0.5rem;
-    padding: 0.7rem;
-    padding-top: 1.5rem;
-
-    ul {
-      li {
-        &:not(:last-of-type) {
-          padding-bottom: 0.8rem;
-        }
-
-        img {
-          padding-right: 0.7rem;
-        }
-      }
-    }
   }
 }
