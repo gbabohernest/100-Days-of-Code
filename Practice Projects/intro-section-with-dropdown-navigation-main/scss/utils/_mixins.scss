@@ -1,0 +1,19 @@
+@mixin flex($justify-content) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin grid($columns, $rows) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-template-rows: $rows + fr;
+}
+
+@mixin flex-mobile-nav($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: $direction;
+}
