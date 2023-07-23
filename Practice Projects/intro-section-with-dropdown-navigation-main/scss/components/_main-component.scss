@@ -3,12 +3,10 @@
   @include u.breakpoints-up(large) {
     width: min(90vw, 1164px);
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
+    @include u.grid(2, 1);
     margin-inline: auto;
-
     gap: 2rem;
+
     grid-template-areas: 'text-content image-container';
   }
 
@@ -56,10 +54,7 @@
 
     @include u.breakpoints-up(large) {
       margin-top: 9.3rem;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      flex-direction: column;
+      @include u.flex-mobile-nav(column);
       text-align: left;
       margin-inline-start: 4.125rem;
     }
@@ -69,15 +64,12 @@
       @include u.breakpoints-up(large) {
         font-size: 2.8rem;
         letter-spacing: 0.0625rem;
+        padding-right: 1rem;
       }
 
       @include u.breakpoints-up(x-large) {
         font-size: 3.67rem;
-      }
-      .br {
-        @include u.breakpoints-up(large) {
-          margin-left: 10rem;
-        }
+        padding-right: 4rem;
       }
     }
     p {
@@ -86,7 +78,6 @@
       font-size: 0.91875rem;
       padding-inline: 0.75rem;
       padding-bottom: 1.25rem;
-      margin-bottom: 1.5625rem;
       line-height: 1.6;
       color: var(--medium-gray);
 
@@ -101,7 +92,7 @@
       @extend %border;
       font-size: 0.8125rem;
       padding: 0.75rem;
-      padding-inline: 1.25rem;
+      padding-inline: 2.2rem;
       background-color: var(--almost-black);
       color: var(--almost-white);
       transition: all 0.3s linear;
@@ -116,12 +107,9 @@
   }
 
   .sponsors-logo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    @include u.flex(space-between);
     gap: 0.7rem;
-    margin-top: 4.8rem;
+    margin-top: 3rem;
 
     img {
       width: 17.172295363%;
