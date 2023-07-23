@@ -45,27 +45,6 @@
                 alt="arrow-up icon"
                 class="arrow-up"
               />
-
-              <div class="sub-menu">
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__list-item">
-                    <img src="images/icon-todo.svg" alt="todo-list icon" />
-                    Todo List
-                  </li>
-                  <li class="sub-menu__list-item">
-                    <img src="images/icon-calendar.svg" alt="Calender icon" />
-                    Calender
-                  </li>
-                  <li class="sub-menu__list-item">
-                    <img src="images/icon-reminders.svg" alt="reminder icon" />
-                    Reminders
-                  </li>
-                  <li class="sub-menu__list-item">
-                    <img src="images/icon-planning.svg" alt="planning icon" />
-                    Planning
-                  </li>
-                </ul>
-              </div>
             </li>
             <li class="navbar__list-item">
               Company
@@ -79,19 +58,12 @@
                 alt="arrow-up icon"
                 class="arrow-up"
               />
-
-              <div class="sub-menu">
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__list-item">History</li>
-                  <li class="sub-menu__list-item">Our Team</li>
-                  <li class="sub-menu__list-item">Blog</li>
-                </ul>
-              </div>
             </li>
             <li class="navbar__list-item">Careers</li>
             <li class="navbar__list-item">About</li>
           </ul>
         </div>
+
         <!-- mobile menu btn -->
         <div class="navbar__hamburger-container" id="hamburger">
           <img
@@ -111,63 +83,34 @@
           <a href="#">Register</a>
         </div>
 
-        <!-- mobile nav -->
-        <div class="mobile-nav-container">
+        <!-- mobile nav container -->
+        <div class="mobile-nav-container close" id="mobile-nav">
           <ul class="mobile-nav">
             <li class="mobile-nav__list-item">
               Features
-              <!--   <img
+              <img
                 src="images/icon-arrow-down.svg"
                 alt="arrow-down icon"
                 class="arrow-down"
-              /> -->
-              <img
+              />
+              <!-- <img
                 src="images/icon-arrow-up.svg"
                 alt="arrow-up icon"
                 class="arrow-up"
-              />
-
-              <div class="mobile-nav__sub-menu">
-                <ul class="mobile-nav__sub-menu-list">
-                  <li class="mobile-nav__sub-menu-list-item">
-                    <img src="images/icon-todo.svg" alt="todo-list icon" />
-                    Todo List
-                  </li>
-                  <li class="mobile-nav__sub-menu-list-item">
-                    <img src="images/icon-calendar.svg" alt="Calender icon" />
-                    Calender
-                  </li>
-                  <li class="mobile-nav__sub-menu-list-item">
-                    <img src="images/icon-reminders.svg" alt="reminder icon" />
-                    Reminders
-                  </li>
-                  <li class="mobile-nav__sub-menu-list-item">
-                    <img src="images/icon-planning.svg" alt="planning icon" />
-                    Planning
-                  </li>
-                </ul>
-              </div>
+              /> -->
             </li>
             <li class="mobile-nav__list-item">
               Company
-              <!-- <img
+              <img
                 src="images/icon-arrow-down.svg"
                 alt="arrow-down icon"
                 class="arrow-down"
-              /> -->
-              <img
+              />
+              <!-- <img
                 src="images/icon-arrow-up.svg"
                 alt="arrow-up icon"
                 class="arrow-up"
-              />
-
-              <div class="mobile-nav__sub-menu">
-                <ul class="mobile-nav__sub-menu-list">
-                  <li class="mobile-nav__sub-menu-list-item">History</li>
-                  <li class="mobile-nav__sub-menu-list-item">Our Team</li>
-                  <li class="mobile-nav__sub-menu-list-item">Blog</li>
-                </ul>
-              </div>
+              /> -->
             </li>
             <li class="mobile-nav__list-item">Careers</li>
             <li class="mobile-nav__list-item">About</li>
@@ -176,8 +119,74 @@
             <a href="#">Login</a>
             <a href="#">Register</a>
           </div>
+
+          <!-- mobile sub menus markup start -->
+
+          <!-- mobile nav sub-menu start -->
+          <div class="mobile-nav__sub-menu displays-none">
+            <div class="mobile-nav__sub-menu-list-item">
+              <img src="images/icon-todo.svg" alt="todo-list icon" />
+              <p>Todo List</p>
+            </div>
+            <div class="mobile-nav__sub-menu-list-item">
+              <img src="images/icon-calendar.svg" alt="Calender icon" />
+              <p>Calender</p>
+            </div>
+            <div class="mobile-nav__sub-menu-list-item">
+              <img src="images/icon-reminders.svg" alt="reminder icon" />
+              <p>Reminders</p>
+            </div>
+            <div class="mobile-nav__sub-menu-list-item">
+              <img src="images/icon-planning.svg" alt="planning icon" />
+              <p>Planning</p>
+            </div>
+          </div>
+          <!-- mobile nav sub-menu end -->
+
+          <!-- mobile nav sub-menu-2 start -->
+          <div class="mobile-nav__sub-menu-2 displays-none">
+            <!-- <ul class="mobile-nav__sub-menu-list"> -->
+            <p>History</p>
+            <p>Our Team</p>
+            <p>Blog</p>
+            <!-- </ul> -->
+          </div>
+          <!-- mobile nav sub-menu-2 end -->
         </div>
+        <!-- mobile nav container end-->
+        <!-- mobile sub menus markup end -->
       </nav>
+
+      <!-- Desktop sub-menu markup start -->
+      <!-- Desktop sub-menu start -->
+      <div class="sub-menu display-none">
+        <div class="sub-menu__list-item">
+          <img src="images/icon-todo.svg" alt="todo-list icon" />
+          <p>Todo List</p>
+        </div>
+        <div class="sub-menu__list-item">
+          <img src="images/icon-calendar.svg" alt="Calender icon" />
+          <p>Calender</p>
+        </div>
+        <div class="sub-menu__list-item">
+          <img src="images/icon-reminders.svg" alt="reminder icon" />
+          <p>Reminders</p>
+        </div>
+        <div class="sub-menu__list-item">
+          <img src="images/icon-planning.svg" alt="planning icon" />
+          <p>Planning</p>
+        </div>
+      </div>
+      <!-- Desktop sub menu end -->
+
+      <!-- Desktop sub-menu 2 starts -->
+      <div class="sub-menu-2 display-none">
+        <p>History</p>
+        <p>Our Team</p>
+        <p>Blog</p>
+      </div>
+      <!-- Desktop sub-menu 2 ends -->
+      <!-- Desktop sub-menu markup end -->
     </header>
 
     <main>
@@ -220,9 +229,8 @@
           >Frontend Mentor</a
         >. Coded by <a href="#">Ernest Push Gbaboh</a>.
       </p>
-      <p class="copyright">&copy;copyright <span class="date">2022</span></p>
     </footer>
 
-    <script src="sandbox.js"></script>
+    <script src="Js/sandbox.js"></script>
   </body>
 </html>
