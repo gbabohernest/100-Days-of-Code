@@ -12,7 +12,10 @@
   min-height: 100vh;
   font-size: 0.85rem;
   color: var(--medium-gray);
-  transition: all 0.3s ease-in-out;
+
+  @include u.breakpoints-up(large) {
+    display: none;
+  }
 }
 .mobile-nav {
   @include u.flex-mobile-nav(column);
@@ -23,16 +26,8 @@
   &__list-item {
     padding-bottom: 1.2rem;
 
-    &:first-of-type {
-      margin-bottom: 9rem; //temp
-    }
-
-    &:nth-child(2) {
-      margin-bottom: 7rem; //temp 7rem
-    }
-
-    img {
-      padding-left: 0.7rem;
+    span {
+      padding-left: 0.4rem;
     }
   }
 
@@ -51,9 +46,9 @@
     }
   }
 
-  img.arrow-up {
-    display: inline-block;
-  }
+  //   img.arrow-up {
+  //     display: inline-block;
+  //   }
 
   // ? sub-menu mobile styles
   &__sub-menu {
@@ -68,11 +63,27 @@
 
   &__sub-menu-2 {
     position: absolute;
-    top: 300px;
+    top: 158px;
     left: 58px;
 
     p {
       padding-bottom: 0.75rem;
     }
   }
+}
+
+.mb {
+  margin-bottom: 9rem;
+}
+
+.mb2 {
+  margin-bottom: 7rem;
+}
+
+li.company {
+  position: relative;
+}
+
+div #sub-menu2 {
+  position: absolute;
 }

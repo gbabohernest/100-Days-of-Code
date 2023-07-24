@@ -31,7 +31,7 @@
         <div class="flex">
           <img src="images/logo.svg" alt="snap-logo" class="navbar__logo" />
 
-          <ul class="navbar__list hide_for_mobile">
+          <ul class="navbar__list hide_for_mobile desktop-sub-menu">
             <li class="navbar__list-item">
               Feature
 
@@ -43,7 +43,7 @@
               <img
                 src="images/icon-arrow-up.svg"
                 alt="arrow-up icon"
-                class="arrow-up"
+                class="arrow-up close-btn"
               />
             </li>
             <li class="navbar__list-item">
@@ -56,7 +56,7 @@
               <img
                 src="images/icon-arrow-up.svg"
                 alt="arrow-up icon"
-                class="arrow-up"
+                class="arrow-up close-btn"
               />
             </li>
             <li class="navbar__list-item">Careers</li>
@@ -85,32 +85,37 @@
 
         <!-- mobile nav container -->
         <div class="mobile-nav-container close" id="mobile-nav">
-          <ul class="mobile-nav">
-            <li class="mobile-nav__list-item">
+          <ul class="mobile-nav mobile-sub-menu">
+            <li class="mobile-nav__list-item features">
               Features
-              <img
-                src="images/icon-arrow-down.svg"
-                alt="arrow-down icon"
-                class="arrow-down"
-              />
-              <!-- <img
-                src="images/icon-arrow-up.svg"
-                alt="arrow-up icon"
-                class="arrow-up"
-              /> -->
+
+              <span class="drop-down-btn features">
+                <img
+                  src="images/icon-arrow-down.svg"
+                  alt="arrow-down icon"
+                  class="arrow-down"
+                />
+                <img
+                  src="images/icon-arrow-up.svg"
+                  alt="arrow-up icon"
+                  class="arrow-up close-btn"
+                />
+              </span>
             </li>
-            <li class="mobile-nav__list-item">
+            <li class="mobile-nav__list-item company">
               Company
-              <img
-                src="images/icon-arrow-down.svg"
-                alt="arrow-down icon"
-                class="arrow-down"
-              />
-              <!-- <img
-                src="images/icon-arrow-up.svg"
-                alt="arrow-up icon"
-                class="arrow-up"
-              /> -->
+              <span class="drop-down-btn company">
+                <img
+                  src="images/icon-arrow-down.svg"
+                  alt="arrow-down icon"
+                  class="arrow-down"
+                />
+                <img
+                  src="images/icon-arrow-up.svg"
+                  alt="arrow-up icon"
+                  class="arrow-up close-btn"
+                />
+              </span>
             </li>
             <li class="mobile-nav__list-item">Careers</li>
             <li class="mobile-nav__list-item">About</li>
@@ -123,7 +128,7 @@
           <!-- mobile sub menus markup start -->
 
           <!-- mobile nav sub-menu start -->
-          <div class="mobile-nav__sub-menu displays-none">
+          <div class="mobile-nav__sub-menu display-none" id="sub-menu-1">
             <div class="mobile-nav__sub-menu-list-item">
               <img src="images/icon-todo.svg" alt="todo-list icon" />
               <p>Todo List</p>
@@ -144,7 +149,7 @@
           <!-- mobile nav sub-menu end -->
 
           <!-- mobile nav sub-menu-2 start -->
-          <div class="mobile-nav__sub-menu-2 displays-none">
+          <div class="mobile-nav__sub-menu-2 display-none" id="sub-menu-2">
             <!-- <ul class="mobile-nav__sub-menu-list"> -->
             <p>History</p>
             <p>Our Team</p>
