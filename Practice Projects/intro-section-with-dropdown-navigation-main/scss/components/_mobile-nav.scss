@@ -46,10 +46,6 @@
     }
   }
 
-  //   img.arrow-up {
-  //     display: inline-block;
-  //   }
-
   // ? sub-menu mobile styles
   &__sub-menu {
     position: absolute;
@@ -63,7 +59,6 @@
 
   &__sub-menu-2 {
     position: absolute;
-    top: 158px;
     left: 58px;
 
     p {
@@ -80,10 +75,10 @@
   margin-bottom: 7rem;
 }
 
-li.company {
-  position: relative;
+.top-300 {
+  top: 300px;
 }
 
-div #sub-menu2 {
-  position: absolute;
+.top-158 {
+  top: 158px;
 }

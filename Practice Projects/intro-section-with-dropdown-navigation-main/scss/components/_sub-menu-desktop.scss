@@ -3,7 +3,6 @@
 // ? Dropdown menu styles for Desktop
 
 .sub-menu {
-  // display: none;
   @extend %sub-menu;
   left: 80px;
 
@@ -14,7 +13,10 @@
 
 .sub-menu-2 {
   @extend %sub-menu;
-  left: 19%;
+  left: 23%;
+  @media screen and (min-width: 1160px) {
+    left: 19%;
+  }
 
   p {
     padding-bottom: 0.75rem;

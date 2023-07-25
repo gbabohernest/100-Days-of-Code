@@ -56,17 +56,16 @@ header {
     &-item {
       padding-right: 1rem;
       img {
-        display: inline-block;
         margin-left: 0.125rem;
       }
 
       &:hover {
         @extend %hover;
       }
-    }
 
-    img.arrow-up {
-      display: none;
+      span {
+        padding-left: 0.1875rem;
+      }
     }
   }
 }
