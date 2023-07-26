@@ -367,3 +367,21 @@
 **Thoughts**
 
 - Despite a week of writing exams, I persevered and completed the project i was working on before and I was able to learn asynchronous javascript. I am looking forward to my next project where I am hoping to implement new concepts and up skill my knowledge of the language.
+
+## Day 50 - 58 [July 26, 2023]
+
+**Today's Progress**
+
+- Started learning React basics
+
+- Learn about components, state, and props in react
+
+- Learn how to add styles to a react component
+
+- Learn how to pass data to a component using props in react
+
+- Completed a Frontend Project with dropdown navigation and toggle functionalities
+
+**Thoughts**
+
+- The week has been a great week for learning. I started my journey of learning a Javascript library called React. I learned about the basic concepts of react, how it is use. What are components, and also what are props and state and how they relate to a component.
