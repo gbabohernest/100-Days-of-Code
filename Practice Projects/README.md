@@ -12,6 +12,7 @@ Each project is contained in its own directory within this main directory. The p
 - [social-media-dashboard-with-theme-switcher](#social-media-dashboard-with-theme-switcher)
 
 - [Age-calculator-app](#age-calculator-app)
+- [Intro-section-with-Dropdown-Navigation](#Intro-section-with-Dropdown-Navigation)
 
 ### Calculator-app
 
@@ -32,3 +33,7 @@ This is a responsive dashboard with a theme switcher that I have built as part o
 ### Age-calculator-app
 
 A responsive age calculator that I have built using mobile as part of Frontend Mentor challenge. This app calculate user's age in years, months, and days and display the age to the user. It also handle wrong inputs and give meaningful error messages to the user.
+
+### Intro-section-with-Dropdown-Navigation
+
+Mobile first approach, build with vanilla js and scss as part of Frontend Mentor challenge. Fully responsive landing page, users can toggle the the dropdown menu both in mobile and desktop view.
