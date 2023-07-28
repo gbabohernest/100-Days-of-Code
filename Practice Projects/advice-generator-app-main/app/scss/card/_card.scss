@@ -1,44 +1,67 @@
+@use '../utils/' as u;
 .advice {
-  width: min(100%, 500px);
-  padding-inline: 23px;
-  padding-bottom: 63px;
-  //   padding: 0 23px 10px;
-  border-radius: 0.7rem;
+  width: min(100%, 520px);
+  padding: u.rem(32);
+  border-radius: u.rem(11.2);
   text-align: center;
   background: var(--DarkGrayishBlue);
   position: relative;
 
   &__number {
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: u.rem(3);
     color: var(--NeonGreen);
 
     span {
-      margin-inline-start: 3px;
+      margin-inline-start: u.rem(3);
     }
   }
 
   &__text {
     color: var(--LightCyan);
-    // font-size: clamp(20px, 2.5vw + 1.5rem, 1.75rem);
-    font-size: 22px;
+    font-size: u.rem(22);
     font-weight: 800;
-    // font-size: 28px; 1.75rem
+    padding: u.rem(24) 0;
+
+    @include u.breakpoint(medium) {
+      font-size: u.rem(28);
+    }
   }
 
   &__pattern_divider {
+    margin-bottom: u.rem(32);
     img {
-      width: 90%;
+      width: 95%;
       object-fit: contain;
+
+      &:first-of-type {
+        @include u.breakpoint(medium) {
+          display: none;
+        }
+      }
+
+      &:last-of-type {
+        @include u.breakpoint-down(small) {
+          display: none;
+        }
+      }
     }
   }
-}
+  &__button {
+    border-radius: 100%;
+    padding: u.rem(17.6);
+    background: var(--NeonGreen);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
 
-.button {
-  border-radius: 100%;
-  padding: 1rem;
-  background: var(--NeonGreen);
-  position: absolute;
-  bottom: 221px;
-  left: 160px;
+    @include u.breakpoint(medium) {
+      top: 266px;
+    }
+
+    &:hover {
+      box-shadow: 1px 0px 22px 1px var(--NeonGreen);
+    }
+  }
 }
