@@ -13,6 +13,7 @@ Each project is contained in its own directory within this main directory. The p
 
 - [Age-calculator-app](#age-calculator-app)
 - [Intro-section-with-Dropdown-Navigation](#Intro-section-with-Dropdown-Navigation)
+- [Advice-generator-app](#advice-generator-app)
 
 ### Calculator-app
 
@@ -37,3 +38,7 @@ A responsive age calculator that I have built using mobile as part of Frontend M
 ### Intro-section-with-Dropdown-Navigation
 
 Mobile first approach, build with vanilla js and scss as part of Frontend Mentor challenge. Fully responsive landing page, users can toggle the the dropdown menu both in mobile and desktop view.
+
+### Advice-generator-app
+
+Responsive advice-generator app build using vanilla Javascript and the Advice slip API. It is part of Frontend Mentor challenge. User can click on the dice icon to generate new piece of advice on the go.
