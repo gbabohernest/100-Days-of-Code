@@ -12,18 +12,27 @@ const fetchAdvice = async () => {
     const data = await response.json();
     return data;
   } catch (error) {
-    throw new Error('Sorry, Can not fetch advice!!');
+    throw new Error("Sorry, Can't fetch advice. Try Again!!");
   }
 };
 
-const updateUI = (id, advice) => {
-  adviceNum.textContent = `#${id}`;
-  adviceContent.textContent = `${advice}`;
+const updateUI = () => {
+  fetchAdvice()
+    .then((data) => {
+      const { slip } = data;
+      const { id, advice } = slip;
+      adviceNum.textContent = `#${id}`;
+      adviceContent.textContent = `${advice}`;
+    })
+    .catch((error) => {
+      adviceContent.textContent = `${error.message}`;
+    });
 };
+
 btn.addEventListener('click', () => {
-  fetchAdvice().then((data) => {
-    const { slip } = data;
-    const { id, advice } = slip;
-    updateUI(id, advice);
-  });
+  updateUI();
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  updateUI();
 });
