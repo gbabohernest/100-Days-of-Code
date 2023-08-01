@@ -1,0 +1,13 @@
+@use '../utils/' as u;
+
+.attribution {
+  font-size: u.rem(10);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-bottom: u.rem(10);
+  color: var(--LightCyan);
+}
+.attribution a {
+  color: var(--NeonGreen);
+  text-decoration: none;
+}
