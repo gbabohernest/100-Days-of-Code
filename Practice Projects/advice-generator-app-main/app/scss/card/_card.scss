@@ -56,10 +56,6 @@
     transform: translateX(-50%);
     cursor: pointer;
 
-    @include u.breakpoint(medium) {
-      top: 257px;
-    }
-
     &:hover {
       box-shadow: 1px 0px 22px 1px var(--NeonGreen);
     }
