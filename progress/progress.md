@@ -312,7 +312,7 @@
 
 - solving these coding challenges has help with that, it has help me think about the problems and come up with an algorithm before writing a single line of code.
 
-## Day 22 - 30 [June 30, 2023]
+## Days 22 - 30 [June 30, 2023]
 
 **Today's Progress**
 
@@ -334,7 +334,7 @@
 
 - This project was another great way to practice my javascript skills and it was a great learning experience. I am looking forward to building more projects with javascript.
 
-## Day 31 - 39 [July 09, 2023]
+## Days 31 - 39 [July 09, 2023]
 
 **Today's Progress**
 
@@ -354,7 +354,7 @@
 
 - This project was a great learning experience for me. I did learn a lot while building the project. Making research, figuring things out, trying stuff out until it work. It took a while to complete this project but I try to soak up everything I could and build it out like the design, which I did and learn in the process.
 
-## Day 40 - 49 [July 18, 2023]
+## Days 40 - 49 [July 18, 2023]
 
 **Today's Progress**
 
@@ -368,7 +368,7 @@
 
 - Despite a week of writing exams, I persevered and completed the project i was working on before and I was able to learn asynchronous javascript. I am looking forward to my next project where I am hoping to implement new concepts and up skill my knowledge of the language.
 
-## Day 50 - 58 [July 26, 2023]
+## Days 50 - 58 [July 26, 2023]
 
 **Today's Progress**
 
@@ -385,3 +385,33 @@
 **Thoughts**
 
 - The week has been a great week for learning. I started my journey of learning a Javascript library called React. I learned about the basic concepts of react, how it is use. What are components, and also what are props and state and how they relate to a component.
+
+## Days 59 - 61 [July 29, 2023]
+
+**Today's Progress**
+
+- Continue my learning of React
+
+- Work on a Frontend Mentor Challenge called advice generator
+
+- Learn how to fetch data from external api using the fetch api
+
+**Thoughts**
+
+- Working with data is a very essential part of a web developer, it is in that vein that I decided to tackle this challenge from frontend mentor. In this challenge we are were ask to use the Advice slip API to generate random advice and output it in the DOM.
+
+## Days 62 - 66 [August 3, 2023]
+
+**Today's Progress**
+
+- I didn't do much coding, I review some react topics.
+
+- Update the markdown files of my ALX SE Program
+
+- Watch python videos and practice the concepts taught in the videos.
+
+- I was unable to do much due to faulty network issue
+
+**Thoughts**
+
+- Since I will be resuming my ALX SE program soon, I decided to recap on some python concepts by watching and reading about them. I was unable to do much due to faulty internet but I did recap on the basic of list, dictionaries, tuples, and set in pythons, and also some of the methods associated with them.
