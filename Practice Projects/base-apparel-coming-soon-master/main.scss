@@ -1,0 +1,142 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+:root {
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --Soft-Red: hsl(0, 93%, 68%);
+
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+  --linear1: 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+  --linear2: 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 1rem;
+  font-family: Helvetica, sans-serif;
+}
+
+img {
+  width: 100%;
+}
+.center {
+  padding-inline: 1.2rem;
+}
+
+@mixin breakpoint() {
+  @media screen and (min-width: 800px) {
+    @content;
+  }
+}
+@mixin breakpoint-down() {
+  @media screen and (max-width: 799.98px) {
+    @content;
+  }
+}
+
+@mixin grid {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 180px 555px;
+  // grid-template-rows: repeat(2, 1fr);
+  // grid-template-areas:
+  //   'grid__logo grid__hero-img'
+  //   'grid__main grid__hero-img';
+  gap: 20px;
+}
+
+.grid {
+  display: grid;
+
+  @include breakpoint() {
+    @include grid;
+  }
+  &__logo {
+    width: 170px;
+    padding: 1.5rem;
+
+    @include breakpoint() {
+      width: 235px;
+      margin-inline: 6.3rem;
+    }
+  }
+
+  &__hero-img {
+    @include breakpoint() {
+      // width: 735px;
+      // grid-column: 2 / 2;
+      // grid-row: 1/2;
+
+      // overflow: auto;
+    }
+    .mobile {
+      display: none;
+      @include breakpoint-down() {
+        display: block;
+      }
+    }
+
+    .dekstop {
+      display: none;
+      @include breakpoint() {
+        display: block;
+      }
+    }
+  }
+
+  &__main {
+    margin-top: 2.5rem;
+    text-align: center;
+
+    @include breakpoint() {
+      width: 500px;
+      margin-inline: auto;
+      text-align: left;
+    }
+    h1 {
+      color: var(--Desaturated-Red);
+      text-transform: uppercase;
+      letter-spacing: 0.7rem;
+      margin-bottom: 1rem;
+
+      span {
+        display: block;
+        color: var(--Dark-Grayish-Red);
+      }
+    }
+
+    p {
+      color: var(--Desaturated-Red);
+      line-height: 1.5;
+      margin-bottom: 1.2rem;
+    }
+
+    form {
+      margin-bottom: 1.5rem;
+      input {
+        border-radius: 3rem;
+        border-color: var(--Dark-Grayish-Red);
+        width: 100%;
+        padding: 0.5rem;
+        position: relative;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder {
+          padding-left: 1rem;
+          color: var(--Dark-Grayish-Red);
+        }
+      }
+    }
+  }
+}
