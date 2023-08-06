@@ -151,6 +151,26 @@ img {
         padding: 0.7rem 1.5rem;
         border: none;
         border-radius: 3rem;
+        cursor: pointer;
+
+        // &:hover {
+        //   //! TODO
+        //   box-shadow: ;
+        // }
+      }
+
+      .error {
+        width: 20px;
+        position: absolute;
+        left: 71%;
+        transform: translate(50%, 50%);
+      }
+
+      .error-message {
+        font-size: 11px;
+        color: var(--Soft-Red);
+        margin-left: 2rem;
+        padding-top: 0.3rem;
       }
     }
   }
@@ -161,4 +181,8 @@ footer {
   a {
     text-decoration: none;
   }
+}
+
+.hide {
+  display: none;
 }
