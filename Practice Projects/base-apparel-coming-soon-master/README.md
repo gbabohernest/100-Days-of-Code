@@ -7,7 +7,6 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
@@ -28,10 +27,6 @@ Users should be able to:
 
 ![](./desktop.png)
 ![](./mobile.png)
-
-### Links
-
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
