@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker App</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Expense Tracker App v1.0</h1>
+      </header>
+      <section class="app-container grid">
+        <article class="app-container__budget container">
+          <form id="budget__form" class="budget__form">
+            <label for="budget__input">Please Enter Your Budget</label>
+            <div class="budget-wrapper">
+              <input
+                type="number"
+                name="number"
+                id="budget__input"
+                class="budget__input"
+              />
+            </div>
+            <button type="submit" name="submit" class="btn btn-budget">
+              Calculate
+            </button>
+          </form>
+        </article>
+
+        <article class="app-container__output">
+          <div class="app-container__output__budget-output">
+            <h2>budget</h2>
+            <!-- <i>
+                <!-- font-awsome icon --
+              </i> -->
+            <h3>$500</h3>
+          </div>
+          <div class="app-container__output__expenses-output">
+            <h2>expenses</h2>
+            <!-- <i>
+                <!-- font-awsome icon --
+              </i> -->
+            <h3>$300</h3>
+          </div>
+          <div class="app-container__output__balance-output">
+            <h2>balance</h2>
+            <!-- <i>
+                <!-- font-awsome icon --
+              </i> -->
+            <h3>$200</h3>
+          </div>
+        </article>
+
+        <article class="app-container__expense">
+          <form id="expenses_form" class="expenses_form">
+            <label for="expense">Please Enter Your Expense</label>
+            <div class="expense-wrapper">
+              <input type="text" name="expense" id="expense" class="expense" />
+            </div>
+            <label for="expense-amount">Please Enter Your Expense Amount</label>
+            <div class="expense-wrapper">
+              <input
+                type="number"
+                name="expense-amount"
+                id="expense-amount"
+                class="expense-amount"
+              />
+            </div>
+
+            <button type="submit" class="btn btn-expense">Add Expense</button>
+          </form>
+        </article>
+
+        <article class="app-container__output__expense">
+          <table>
+            <tr>
+              <th>Expense Title</th>
+              <th>Expense Value</th>
+            </tr>
+
+            <tr>
+              <td>rent</td>
+              <td>2000</td>
+              <td><span>edit</span> <span>delete</span></td>
+            </tr>
+          </table>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
