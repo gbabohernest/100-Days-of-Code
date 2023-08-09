@@ -1,0 +1,22 @@
+%border {
+  padding: 0.8rem 0.6rem;
+  border: 1px solid;
+  border-radius: 0.4rem;
+}
+
+%btn {
+  width: 100%;
+  font-size: 0.896rem;
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  border: 0.13rem solid;
+  border-radius: 0.2rem;
+  margin: 1rem 0 0;
+}
+
+%flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
