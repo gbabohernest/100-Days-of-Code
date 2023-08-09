@@ -1,0 +1,55 @@
+@use '../utils/' as u;
+.app-container {
+  label {
+    font-size: 0.8rem;
+    padding-bottom: 0.9rem;
+  }
+
+  &__output {
+    @extend %flex;
+
+    div {
+      padding: 0.4rem;
+      text-align: center;
+    }
+  }
+  input {
+    width: 100%;
+    padding: 0.3rem;
+    margin: 0.5rem 0;
+    border-radius: 0.2rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__budget {
+    @extend %border;
+    border-color: rgb(41, 80, 41);
+
+    input {
+      border: 1px solid rgb(204, 194, 194);
+    }
+    .btn-budget {
+      @extend %btn;
+      color: rgb(41, 80, 41);
+      border-color: rgb(121, 158, 121);
+    }
+  }
+
+  &__expense {
+    @extend %border;
+    border-color: rgb(117, 2, 2);
+
+    input {
+      border: 1px solid rgb(179, 142, 142);
+    }
+
+    .btn-expense {
+      @extend %btn;
+      color: rgb(139, 4, 4);
+      border-color: rgb(139, 4, 4);
+    }
+  }
+}
