@@ -32,5 +32,10 @@ body {
 }
 
 main {
+  width: min(100%, 1000px);
+  margin-inline: auto;
   padding: 0.6rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

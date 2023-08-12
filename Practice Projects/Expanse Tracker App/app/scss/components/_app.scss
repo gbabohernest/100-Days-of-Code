@@ -1,5 +1,9 @@
 @use '../utils/' as u;
 .app-container {
+  @include u.breakpoint() {
+    @include u.grid;
+  }
+
   label {
     font-size: 0.8rem;
     padding-bottom: 0.9rem;
@@ -11,6 +15,15 @@
     div {
       padding: 0.4rem;
       text-align: center;
+    }
+    .dollar_sign {
+      padding-inline-end: 3px;
+    }
+
+    @include u.breakpoint() {
+      h3 {
+        font-size: 1.5rem;
+      }
     }
   }
   input {
@@ -51,5 +64,11 @@
       color: rgb(139, 4, 4);
       border-color: rgb(139, 4, 4);
     }
+  }
+
+  &__output__expense {
+    font-size: 11px;
+    padding: 1rem 0.4rem;
+    text-align: center;
   }
 }
