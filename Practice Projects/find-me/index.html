@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- google font roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>FindMe</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="offscreen">Find Me A Wikipedia Powered Search Engine</h1>
+      <section class="searchEntry">
+        <h2 class="offscreen">Search Term Entry</h2>
+        <div class="logo" aria-hidden="true">FindMe</div>
+        <form id="searchBar" class="searchBar">
+          <label for="search" class="offscreen">Enter a search term</label>
+          <input type="text" id="search" autocomplete="on" />
+          <div
+            id="clear"
+            class="none button clear"
+            role="button"
+            tabindex="0"
+            aria-label="clear search terms"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <button
+            id="searchButton"
+            class="button searchButton"
+            type="submit"
+            aria-label="Submit button"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </section>
+      <section class="results">
+        <h2 class="offscreen">Search Results</h2>
+        <div class="statsBar">
+          <div id="stats" class="stats" aria-live="assertive"></div>
+        </div>
+        <div id="searchResults" class="searchResults">
+          <div class="resultItem">
+            <div class="resultTitle">
+              <a href="">Dasch</a>
+            </div>
+            <div class="resultContents">
+              <div class="resultImage">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Mao-the-dachshund-wikipedia.png/50px-Mao-the-dachshund-wikipedia.png"
+                  alt="Dasch"
+                />
+              </div>
+              <div class="resultText">
+                <p class="resultDescription">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora dolor nemo cumque ratione amet harum eum ea iure
+                  doloribus magni.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        <span aria-hidden="true">&lt;&lt;</span>Powered by
+        <a href="https://www.wikipedia.org" target="_blank">Wikipedia</a
+        ><span aria-hidden="true">&gt;&gt; </span>
+      </p>
+    </footer>
+  </body>
+</html>
