@@ -1,0 +1,49 @@
+@use '../utils/' as u;
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background-color: u.$backgroundColor;
+  color: u.$fontColor;
+  width: 100vw;
+  min-height: 100vh;
+  font-family: u.$fontStack;
+  font-size: u.rem(22);
+}
+
+main {
+  @include u.flexColumn;
+  min-height: calc(100vh - u.rem(60));
+}
+
+footer {
+  width: 100%;
+  height: u.rem(60);
+  @include u.flexCenter;
+
+  p {
+    color: u.$statsColor;
+    font-size: u.rem(8);
+    @include u.breakpointUp(large) {
+      font-size: u.rem(16);
+    }
+    a {
+      color: u.$statsColor;
+    }
+  }
+}
+
+img {
+  display: block;
+}

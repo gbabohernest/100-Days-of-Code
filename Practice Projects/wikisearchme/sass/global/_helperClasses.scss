@@ -1,0 +1,39 @@
+@use '../utils/' as u;
+// Logo colors classes
+.dark {
+  color: u.$logoDark;
+}
+
+.crimson {
+  color: u.$logoCrimson;
+}
+.yellow {
+  color: u.$logoYellow;
+}
+
+.green {
+  color: u.$logoGreen;
+}
+.blue {
+  color: u.$logoBlue;
+}
+
+.exclamation {
+  display: inline-block;
+  font-size: u.rem(40);
+  transform: rotate(12deg);
+  @include u.breakpointUp(large) {
+    font-size: u.rem(80);
+  }
+}
+
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+.none {
+  display: none;
+}
+.flex {
+  display: flex;
+}
