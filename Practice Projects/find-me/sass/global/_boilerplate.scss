@@ -14,11 +14,11 @@ html {
 
 html,
 body {
-  background-color: $backgroundColor;
-  color: $fontColor;
+  background-color: u.$backgroundColor;
+  color: u.$fontColor;
   width: 100vw;
   min-height: 100vh;
-  font-family: $fontStack;
+  font-family: u.$fontStack;
   font-size: u.rem(22);
 }
 
@@ -33,17 +33,32 @@ footer {
   @include u.flexCenter;
 
   p {
-    color: $statsColor;
+    color: u.$statsColor;
     font-size: u.rem(8);
+
     @include u.breakpointUp(large) {
       font-size: u.rem(16);
     }
+
     a {
-      color: $statsColor;
+      color: u.$statsColor;
     }
   }
 }
-
 img {
   display: block;
+}
+
+a {
+  color: u.$linkColor;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: u.$linkVisitedColor;
 }
