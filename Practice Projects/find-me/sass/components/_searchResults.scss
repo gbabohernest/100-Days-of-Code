@@ -1,0 +1,76 @@
+@use '../utils/' as u;
+.results {
+  @include u.flexColumn;
+  padding: u.rem(8) u.rem(16);
+  width: 90vw;
+  @include u.breakpointUp(large) {
+    width: 75vw;
+  }
+  @include u.breakpointUp(x-large) {
+    width: 61vw;
+  }
+
+  .statsBar {
+    width: 100%;
+
+    .stats {
+      color: u.$statsColor;
+      font-size: u.rem(12);
+      @include u.breakpointUp(large) {
+        font-size: u.rem(16);
+      }
+    }
+  }
+
+  .searchResults {
+    width: 100%;
+    .resultItem {
+      @include u.flexColumn;
+      width: 100%;
+      padding: u.rem(4) 0;
+      @include u.breakpointUp(large) {
+        padding: u.rem(8) 0;
+      }
+
+      .resultTitle {
+        width: 100%;
+        text-align: left;
+        font-size: u.rem(16);
+        line-height: u.rem(24);
+        margin-bottom: u.rem(4);
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding: u.rem(3) u.rem(2);
+
+        @include u.breakpointUp(large) {
+          font-size: u.rem(24);
+          line-height: u.rem(28);
+          margin-bottom: u.rem(8);
+        }
+      }
+
+      .resultContents {
+        display: flex;
+        width: 100%;
+
+        .resultImage {
+          margin-right: u.rem(8);
+        }
+        .resultText {
+          flex-grow: 1;
+          font-size: u.rem(14);
+          line-height: u.rem(20);
+          max-height: 60px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          @include u.breakpointUp(large) {
+            font-size: u.rem(16);
+            line-height: u.rem(28);
+          }
+        }
+      }
+    }
+  }
+}

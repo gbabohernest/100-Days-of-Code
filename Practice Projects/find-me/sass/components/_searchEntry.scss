@@ -1,0 +1,116 @@
+@use '../utils/' as u;
+.searchEntry {
+  @include u.flexColumn;
+  padding-top: u.rem(40);
+
+  .logo {
+    letter-spacing: u.rem(-3);
+    font-size: u.rem(25);
+    font-weight: 600;
+    margin-bottom: u.rem(8);
+
+    @include u.breakpointUp(large) {
+      font-size: u.rem(64);
+      letter-spacing: u.rem(-10);
+      font-weight: 800;
+    }
+  }
+
+  .searchBar {
+    width: 90vw;
+    display: flex;
+    border: u.rem(2) solid u.$searchBarBorder;
+    border-radius: u.rem(500);
+    padding: u.rem(2.4) u.rem(4) u.rem(2.4) u.rem(12);
+
+    @include u.breakpointUp(large) {
+      width: 80vw;
+      padding: u.rem(20) u.rem(24);
+    }
+
+    @include u.breakpointUp(x-large) {
+      width: 60vw;
+    }
+
+    input[type='text'] {
+      flex-grow: 1;
+      font-size: u.rem(12);
+      text-align: left;
+      letter-spacing: u.rem(1.6);
+      border: none;
+      outline: none;
+      min-width: 150px;
+
+      &::placeholder {
+        color: u.$statsColor;
+        text-align: center;
+        font-size: u.rem(10);
+
+        @include u.breakpointUp(large) {
+          font-size: u.rem(16);
+        }
+      }
+
+      @include u.breakpointUp(large) {
+        font-size: u.rem(20);
+      }
+    }
+
+    .button {
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      min-width: 48px;
+      min-height: 48px;
+      outline: none;
+
+      i {
+        font-family: 'Font Awesome 5 Free';
+        font-size: u.rem(16);
+        @include u.breakpointUp(large) {
+          font-size: u.rem(24);
+        }
+      }
+    }
+    .clear {
+      //   display: flex;
+      justify-content: center;
+      align-items: center;
+      color: u.$statsColor;
+      border-right: thin solid u.$clearButtonColor;
+
+      &:hover,
+      :focus {
+        i {
+          transition: all 0.3s ease-in-out;
+          color: u.$logoCrimson;
+        }
+      }
+    }
+
+    .clear {
+      @include u.breakpointUp(large) {
+        padding: 0 u.rem(16);
+      }
+    }
+    .searchButton {
+      &:hover,
+      :focus {
+        i {
+          transition: all 0.3s ease-in-out;
+          color: u.$logoGreen;
+        }
+      }
+    }
+    .searchButton {
+      @include u.breakpointUp(large) {
+        padding-left: u.rem(16);
+      }
+    }
+  } // end of search bar styles
+}
+
+.searchBar:hover,
+.searchBar:focus-within {
+  box-shadow: 0 u.rem(2) u.rem(5) u.rem(2) u.$searchBarBorder;
+}
