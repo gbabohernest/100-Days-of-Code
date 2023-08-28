@@ -2,6 +2,7 @@
 @use 'pixel-converter' as pixel;
 $breakpointUp: (
   'large': pixel.em(768),
+  'x-large': pixel.em(1024),
 );
 
 @mixin breakpointUp($size) {
