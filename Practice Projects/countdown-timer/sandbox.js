@@ -19,12 +19,15 @@ const updateCountdown = () => {
   const seconds = Math.floor((timeUntilTravelDate % (1000 * 60)) / 1000);
 
   daysElement.innerText = days;
-  hoursElement.innerText = hours;
-  minutesElement.innerText = minutes;
-  secondsElement.innerText = seconds;
+  hoursElement.innerText = formatTime(hours);
+  minutesElement.innerText = formatTime(minutes);
+  secondsElement.innerText = formatTime(seconds);
 
   // console.log(timeUntilTravelDate);
   // console.log(days, hours, minutes, seconds);
 };
 
+const formatTime = (time) => {
+  return time < 10 ? `0${time}` : time;
+};
 setInterval(updateCountdown, 1000);
