@@ -29,4 +29,6 @@ This is a digital clock that displays the current date, time, year, and weekday 
 
 - checkout the screenshot
 
-![](/screenshot.png)
+<!-- ![](/screenshot.png) -->
+
+![Digital Clock SS](screenshot.png)
