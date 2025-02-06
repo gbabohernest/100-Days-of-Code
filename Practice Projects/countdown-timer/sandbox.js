@@ -12,7 +12,7 @@ const updateCountdown = () => {
   const days = Math.floor(timeUntilTravelDate / (1000 * 60 * 60 * 24));
   const hours = Math.floor(
     (timeUntilTravelDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  ); // extract the remaining hours.
+  );
   const minutes = Math.floor(
     (timeUntilTravelDate % (1000 * 60 * 60)) / (1000 * 60)
   );
