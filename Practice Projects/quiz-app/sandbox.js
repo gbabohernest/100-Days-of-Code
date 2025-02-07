@@ -5,14 +5,14 @@ const quizQuestions = [
     answer: 'Paris',
   },
 
-  {
-    question: 'What does HTML stands for?',
-    a: 'HyperText Machine Language',
-    b: 'Honestly Terminal Machine Language',
-    c: 'Home Tool Markup Language',
-    d: 'HyperText Markup Language',
-    answer: 'd',
-  },
+  // {
+  //   question: 'What does HTML stands for?',
+  //   a: 'HyperText Machine Language',
+  //   b: 'Honestly Terminal Machine Language',
+  //   c: 'Home Tool Markup Language',
+  //   d: 'HyperText Markup Language',
+  //   answer: 'd',
+  // },
   {
     question: 'Which planet is known as the Red Planet?',
     options: ['Earth', 'Mars', 'Jupiter', 'Venus'],
@@ -59,3 +59,28 @@ const quizQuestions = [
     answer: 'Everest',
   },
 ];
+
+const question1 = document.getElementById('q1');
+const question2 = document.getElementById('q2');
+const question3 = document.getElementById('q3');
+const question4 = document.getElementById('q4');
+
+const answerPlaceholders = document.querySelectorAll('label');
+
+const questionText = document.getElementById('question-text');
+const questionNum = document.getElementById('question-no');
+
+const submit = document.getElementById('submit');
+
+let currentQuestionIndex = 0;
+let questionNumber = 0;
+
+const getQuizQuestion = () => {
+  const currentQuestionObj = quizQuestions[currentQuestionIndex];
+  questionText.innerHTML = currentQuestionObj.question;
+  answerPlaceholders.forEach((label, index) => {
+    label.innerHTML = currentQuestionObj.options[index];
+  });
+};
+
+getQuizQuestion();
