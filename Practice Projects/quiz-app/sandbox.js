@@ -115,6 +115,7 @@ const handleQuizSubmission = () => {
   if (currentQuestionIndex >= quizQuestions.length) {
     // display score and restart button
     quizResult.innerHTML = `Your score: ${score}/${quizQuestions.length} `;
+    quizResult.style.padding = `${0.5}rem`;
     questionNum.innerHTML = `Quiz Completed!!!`;
 
     restartBtn.style.display = 'block';
@@ -140,6 +141,7 @@ const restartGame = () => {
 
   // clear the score
   quizResult.innerHTML = '';
+  quizResult.style.padding = '0';
   getQuizQuestion();
 };
 
