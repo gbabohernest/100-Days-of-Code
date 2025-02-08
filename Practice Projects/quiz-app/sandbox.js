@@ -129,6 +129,19 @@ const handleQuizSubmission = () => {
   getQuizQuestion();
 };
 
+/**
+ * Restarts the game
+ */
+const restartGame = () => {
+  restartBtn.style.display = 'none';
+  submitBtn.style.display = 'block';
+
+  // clear the score
+  quizResult.innerHTML = '';
+  getQuizQuestion();
+};
+
 getQuizQuestion();
 
 submitBtn.addEventListener('click', handleQuizSubmission);
+restartBtn.addEventListener('click', restartGame);
