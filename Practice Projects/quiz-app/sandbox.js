@@ -5,14 +5,6 @@ const quizQuestions = [
     answer: 'Paris',
   },
 
-  // {
-  //   question: 'What does HTML stands for?',
-  //   a: 'HyperText Machine Language',
-  //   b: 'Honestly Terminal Machine Language',
-  //   c: 'Home Tool Markup Language',
-  //   d: 'HyperText Markup Language',
-  //   answer: 'd',
-  // },
   {
     question: 'Which planet is known as the Red Planet?',
     options: ['Earth', 'Mars', 'Jupiter', 'Venus'],
@@ -64,18 +56,11 @@ const answerPlaceholders = document.querySelectorAll('label');
 const answerInputs = document.querySelectorAll("input[name='quiz']");
 const questionText = document.getElementById('question-text');
 const questionNum = document.getElementById('question-no');
-const submit = document.getElementById('submit');
+const submitBtn = document.getElementById('submit');
 
 let currentQuestionIndex = 0;
-let questionNumber = 0;
+let numOfQuestion = 1;
 let score = 0;
-
-/* features 
-Track the user's selected answer
-Validate if the selected answer is correct 
-Show the score at the end of the quiz
-Restart the quiz when completed. 
-*/
 
 /**
  * Function to display the quiz question.
@@ -83,6 +68,8 @@ Restart the quiz when completed.
 const getQuizQuestion = () => {
   const currentQuestionObj = quizQuestions[currentQuestionIndex];
   questionText.innerHTML = currentQuestionObj.question;
+  questionNum.innerHTML = `Question ${numOfQuestion}/${quizQuestions.length}`;
+
   answerPlaceholders.forEach((label, index) => {
     label.innerHTML = currentQuestionObj.options[index];
 
