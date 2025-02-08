@@ -61,7 +61,7 @@ const restartBtn = document.getElementById('restart-btn');
 const quizResult = document.getElementById('quiz-result');
 
 let currentQuestionIndex = 0;
-let numOfQuestion = 1;
+let numOfQuestion = 0;
 let score = 0;
 
 /**
@@ -70,7 +70,9 @@ let score = 0;
 const getQuizQuestion = () => {
   const currentQuestionObj = quizQuestions[currentQuestionIndex];
   questionText.innerHTML = currentQuestionObj.question;
-  questionNum.innerHTML = `Question ${numOfQuestion}/${quizQuestions.length}`;
+  questionNum.innerHTML = `Question ${numOfQuestion + 1}/${
+    quizQuestions.length
+  }`;
 
   answerPlaceholders.forEach((label, index) => {
     label.innerHTML = currentQuestionObj.options[index];
