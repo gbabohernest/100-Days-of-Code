@@ -57,6 +57,8 @@ const answerInputs = document.querySelectorAll("input[name='quiz']");
 const questionText = document.getElementById('question-text');
 const questionNum = document.getElementById('question-no');
 const submitBtn = document.getElementById('submit');
+const restartBtn = document.getElementById('restart-btn');
+const quizResult = document.getElementById('quiz-result');
 
 let currentQuestionIndex = 0;
 let numOfQuestion = 1;
@@ -83,4 +85,50 @@ const getQuizQuestion = () => {
   });
 };
 
+/**
+ * function to check and move to the next question.
+ */
+const handleQuizSubmission = () => {
+  let selectedAnswer;
+
+  answerInputs.forEach((input) => {
+    if (input.checked) {
+      selectedAnswer = input.value;
+    }
+  });
+
+  if (!selectedAnswer) {
+    alert('Please select an answer');
+    return;
+  }
+
+  // check if the answer is correct
+  if (selectedAnswer === quizQuestions[currentQuestionIndex].answer) {
+    score++;
+  }
+  currentQuestionIndex++;
+  numOfQuestion++;
+
+  // check if all questions are answered
+  if (currentQuestionIndex >= quizQuestions.length) {
+    // display score and restart button
+    quizResult.innerHTML = `Your score: ${score}/${quizQuestions.length} `;
+    questionNum.innerHTML = `Quiz Completed!!!`;
+
+    restartBtn.style.display = 'block';
+
+    // reset quiz
+    currentQuestionIndex = 0;
+    score = 0;
+    numOfQuestion = 0;
+
+    // disable the submit button
+    submitBtn.style.display = 'none';
+    return;
+  }
+  getQuizQuestion();
+};
+
 getQuizQuestion();
+
+submitBtn.addEventListener('click', handleQuizSubmission);
