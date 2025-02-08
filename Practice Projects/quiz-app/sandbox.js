@@ -60,26 +60,39 @@ const quizQuestions = [
   },
 ];
 
-const question1 = document.getElementById('q1');
-const question2 = document.getElementById('q2');
-const question3 = document.getElementById('q3');
-const question4 = document.getElementById('q4');
-
 const answerPlaceholders = document.querySelectorAll('label');
-
+const answerInputs = document.querySelectorAll("input[name='quiz']");
 const questionText = document.getElementById('question-text');
 const questionNum = document.getElementById('question-no');
-
 const submit = document.getElementById('submit');
 
 let currentQuestionIndex = 0;
 let questionNumber = 0;
+let score = 0;
 
+/* features 
+Track the user's selected answer
+Validate if the selected answer is correct 
+Show the score at the end of the quiz
+Restart the quiz when completed. 
+*/
+
+/**
+ * Function to display the quiz question.
+ */
 const getQuizQuestion = () => {
   const currentQuestionObj = quizQuestions[currentQuestionIndex];
   questionText.innerHTML = currentQuestionObj.question;
   answerPlaceholders.forEach((label, index) => {
     label.innerHTML = currentQuestionObj.options[index];
+
+    //store ans value
+    answerInputs[index].value = currentQuestionObj.options[index];
+  });
+
+  //reset checked radio button
+  answerInputs.forEach((input) => {
+    input.checked = false;
   });
 };
 
