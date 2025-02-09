@@ -14,6 +14,8 @@ Each project is contained in its own directory within this main directory. The p
 - [Age-calculator-app](#age-calculator-app)
 - [Intro-section-with-Dropdown-Navigation](#Intro-section-with-Dropdown-Navigation)
 - [Advice-generator-app](#advice-generator-app)
+- [Countdown-Timer](#countdown-timer)
+- [Quiz App](#quiz-app)
 
 ### Calculator-app
 
@@ -42,3 +44,11 @@ Mobile first approach, build with vanilla js and scss as part of Frontend Mentor
 ### Advice-generator-app
 
 Responsive advice-generator app build using vanilla Javascript and the Advice slip API. It is part of Frontend Mentor challenge. User can click on the dice icon to generate new piece of advice on the go.
+
+### Countdown-Timer
+
+A countdown timer app that counts the amount of days, hours, mins, and seconds left to my travel date. Built with vanilla Js.
+
+### Quiz App
+
+A simple quiz application where users answer multiple-choice questions and receive a score based on their performance.
