@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="dist/css/main.min.css" />
+    <script src="sandbox.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <article class="card">
+        <div class="card__questionnaire">
+          <!-- <h4 id="question-no"></h4> -->
+          <span id="question-no"></span>
+          <h3 id="question-text">Question</h3>
+          <div class="card__questionnaire--question">
+            <input type="radio" id="question1" name="quiz" />
+            <label for="question1" id="q1"></label>
+          </div>
+
+          <div class="card__questionnaire--question">
+            <input type="radio" id="question2" name="quiz" />
+            <label for="question2" id="q2"></label>
+          </div>
+          <div class="card__questionnaire--question">
+            <input type="radio" id="question3" name="quiz" />
+            <label for="question3" id="q3"></label>
+          </div>
+
+          <div class="card__questionnaire--question">
+            <input type="radio" id="question4" name="quiz" />
+            <label for="question4" id="q4"></label>
+          </div>
+        </div>
+        <div class="result">
+          <div class="quiz-result" id="quiz-result">
+            <!-- quiz result goes here -->
+          </div>
+          <div class="btn-container">
+            <button class="submit" id="submit">Submit Answer</button>
+
+            <button class="restart" id="restart-btn">Restart Quiz</button>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
