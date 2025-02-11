@@ -10,7 +10,7 @@ Each project is contained in its own directory within this main directory. The p
 - [Coding-bootcamp-testimonials](#coding-bootcamp-testimonials)
 - [Digital-clock](#Digital-clock)
 - [social-media-dashboard-with-theme-switcher](#social-media-dashboard-with-theme-switcher)
-
+- [Base Apparel](#base-apparel-coming-soon-master)
 - [Age-calculator-app](#age-calculator-app)
 - [Intro-section-with-Dropdown-Navigation](#Intro-section-with-Dropdown-Navigation)
 - [Advice-generator-app](#advice-generator-app)
@@ -32,6 +32,10 @@ This is a digital clock that displays the current date, time, year, and weekday 
 ### social-media-dashboard-with-theme-switcher
 
 This is a responsive dashboard with a theme switcher that I have built as part of the Frontend Mentor challenge. Users can toggle the theme switcher on any device to switch between light and dark themes.
+
+### Base Apparel
+
+A responsive solution to the Frontend Mentor [Base Apparel coming soon page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0) challenge.
 
 ### Age-calculator-app
 
