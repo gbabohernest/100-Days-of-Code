@@ -8,6 +8,20 @@ export const getSearchTerm = () => {
 };
 
 /**
+ * Fetch data from the wikipedia api
+ * @param {*} searchString - search uri.
+ */
+const requestData = async (searchString) => {
+  try {
+    const response = await fetch(searchString);
+    const data = await response.json();
+    return data;
+  } catch (e) {
+    console.error(e);
+  }
+};
+
+/**
  * Construct a Wikipedia API search URL for a given topic.
  * @param {string} topic - The search term for Wikipedia.
  * @returns {string} - The encoded Wikipedia API search URL.
