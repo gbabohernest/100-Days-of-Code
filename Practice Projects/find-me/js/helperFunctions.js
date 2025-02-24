@@ -8,8 +8,25 @@ export const getSearchTerm = () => {
 };
 
 /**
+ * A function that retrieve and return the search results.
+ * @param {string} - A string representing the searchQuery
+ * @return {array} - An array of the search results.
+ */
+export const getSearchResults = async (searchQuery) => {
+  const searchString = getSearchString(searchQuery);
+  const searchResults = await requestData(searchString);
+  let results = [];
+
+  if (searchResults.hasOwnProperty('query')) {
+    // we have results
+    results = processSearchResults(searchResults.query.pages);
+  }
+  return results;
+};
+
+/**
  * Process the results return from the Wikipedia API
- * @return An array containing the results.
+ * @return {array} An array containing the results.
  */
 const processSearchResults = (results) => {
   const resultArray = [];
