@@ -23,3 +23,13 @@ const createResultImage = (result) => {
   resultImage.append(img);
   return resultImage;
 };
+
+const resultText = (result) => {
+  const resultText = document.createElement('div');
+  resultText.classList.add('resultText');
+  const resultDescription = document.createElement('p');
+  resultDescription.classList.add('resultDescription');
+  resultDescription.textContent = result.text;
+  resultText.append(resultDescription);
+  return resultText;
+};
