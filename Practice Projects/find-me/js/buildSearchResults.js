@@ -51,3 +51,16 @@ export const buildSearchResult = (resultList) => {
     searchResults.append(resultItem);
   });
 };
+
+export const clearStatsLine = () => {
+  document.getElementById('stats').textContent = '';
+};
+
+export const setTheStatsLine = (numOfResults) => {
+  const statLine = document.getElementById('stats');
+  if (numOfResults) {
+    statLine.textContent = `Displaying ${numOfResults} results.`;
+  } else {
+    statLine.textContent = 'Sorry, no results';
+  }
+};
