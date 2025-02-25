@@ -34,7 +34,7 @@ const createResultText = (result) => {
   return resultText;
 };
 
-export const buildSearchResult = (resultList) => {
+export const buildSearchResults = (resultList) => {
   resultList.forEach((result) => {
     const resultItem = createResultItem(result);
     const resultContents = document.createElement('div');
