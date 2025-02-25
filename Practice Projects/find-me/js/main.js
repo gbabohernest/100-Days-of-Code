@@ -1,30 +1,32 @@
-import { setSearchFocus } from './searchBar.js';
 import {
+  clearPushListener,
+  clearSearchText,
+  setSearchFocus,
+  showClearTextButton,
+} from './searchBar.js';
+import {
+  deleteSearchResults,
   buildSearchResults,
   clearStatsLine,
   setTheStatsLine,
 } from './buildSearchResults.js';
-import { getSearchTerm, processTheSearchQuery } from './helperFunctions.js';
-
-document.addEventListener('readystatechange', (e) => {
-  if (e.target.readystate === 'complete') {
-    initApplication();
-  }
-});
+import { getSearchTerm, getSearchResults } from './helperFunctions.js';
 
 const initApplication = () => {
-  //set the focus on text input
   setSearchFocus();
-  //TODO 3 listeners clear text
-
+  const search = document.getElementById('search');
+  search.addEventListener('input', showClearTextButton);
+  const clear = document.getElementById('clear');
+  clear.addEventListener('click', clearSearchText);
+  clear.addEventListener('keydown', clearPushListener);
   const form = document.getElementById('searchBar');
   form.addEventListener('submit', submitSearchQuery);
 };
 
 const submitSearchQuery = (e) => {
   e.preventDefault();
-  //TODO delete old search result
-  processTheSearchQuery();
+  deleteSearchResults();
+  processTheSearch();
   setSearchFocus();
 };
 
@@ -40,3 +42,8 @@ const processTheSearch = async () => {
   if (resultList.length) buildSearchResults(resultList);
   setTheStatsLine(resultList.length);
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+  // console.log('hi');
+  initApplication();
+});
