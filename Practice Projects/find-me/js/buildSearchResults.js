@@ -1,5 +1,14 @@
 // This module contains functions that build up the html elements dynamically to output the search results.
 
+const deleteSearchResults = () => {
+  const parentElement = document.getElementById('searchResults');
+  let child = parentElement.lastElementChild;
+  while (child) {
+    parentElement.removeChild(child);
+    child = parentElement.lastElementChild;
+  }
+};
+
 const createResultItem = (result) => {
   const resultItem = document.createElement('div');
   resultItem.classList.add('resultItem');
